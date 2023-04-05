@@ -1,0 +1,24 @@
+/**
+* Author      : Immanuel Yohansen (immanuel.yohansen@sinbad.co.id)
+* Modifier    :
+* Domain      : account
+* Description : This File for Provide Testcase on API get_role-list-internal-employee
+*/
+
+export default {
+  describe: 'get role-list-internal-employee --',
+  type: ['@negative', '@positive'],
+  author: 'fulki.firosyan@sinbad.co.id',
+  cardJira: 'TCH-84',
+  positive: {
+    default: 'As a Supplier Admin, I should be able to successfully get role list for internal employee',
+  },
+  negative: {
+    invalidPlatform: 'As a Supplier Admin, I should not be able to get role list for internal employee because set x-platform header to Invalid',
+    nullPlatform: 'As a Supplier Admin, I should not be able to get role list for internal employee because set x-platform header to Null',
+    emptyPlatform: 'As a Supplier Admin, I should not be able to get role list for internal employee because x-platform header set to Empty',
+    invalidCookies: 'As a Supplier Admin, I should not be able to get role list for internal employee because cookies set to Invalid',
+    nullCookies: 'As a Supplier Admin, I should not be able to get role list for internal employee because cookies set to Null',
+    emptyCookies: 'As a Supplier Admin, I should not be able to get role list for internal employee because cookies set to Empty',
+  },
+};

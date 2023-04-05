@@ -1,0 +1,24 @@
+{
+  "type": "object",
+  "properties": {
+      "message": {
+          "type": "string"
+      },
+      "errorMessage": {
+          "type": ["string", "object"]
+      },
+      "type": {
+          "type": "string"
+      },
+      "code": {
+          "type": "integer"
+      }
+  },
+  "additionalProperties": false,
+  "required": [
+      "message",
+      "errorMessage",
+      "type",
+      "code"
+  ]
+}

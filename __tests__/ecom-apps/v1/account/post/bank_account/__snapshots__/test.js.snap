@@ -1,0 +1,184 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`@negative post bank_account -- As a Store, I should not be able to add my bank account if the accountName is a number 1`] = `
+Object {
+  "code": 40010000001,
+  "errorMessage": Object {
+    "accountName": "accountName must be a string",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative post bank_account -- As a Store, I should not be able to add my bank account if the accountName is null 1`] = `
+Object {
+  "code": 40010000001,
+  "errorMessage": Object {
+    "accountName": "accountName should not be empty",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative post bank_account -- As a Store, I should not be able to add my bank account if the accountNo is a number 1`] = `
+Object {
+  "code": 40010000001,
+  "errorMessage": Object {
+    "accountNo": "accountNo must be a number string",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative post bank_account -- As a Store, I should not be able to add my bank account if the accountNo is null 1`] = `
+Object {
+  "code": 40010000001,
+  "errorMessage": Object {
+    "accountNo": "accountNo should not be empty",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative post bank_account -- As a Store, I should not be able to add my bank account if the bankId is not a number 1`] = `
+Object {
+  "code": 40010000001,
+  "errorMessage": Object {
+    "bankId": "bankId must be a number conforming to the specified constraints",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative post bank_account -- As a Store, I should not be able to add my bank account if the bankId is not exist 1`] = `
+Object {
+  "code": 40020000002,
+  "errorMessage": "This bankId doesn't exist",
+  "message": "Bad request",
+  "type": "BAD_REQUEST",
+}
+`;
+
+exports[`@negative post bank_account -- As a Store, I should not be able to add my bank account if the bankId is null 1`] = `
+Object {
+  "code": 40010000001,
+  "errorMessage": Object {
+    "bankId": "bankId should not be empty",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative post bank_account -- As a Store, I should not be able to add my bank account if the branch is a number 1`] = `
+Object {
+  "code": 40010000001,
+  "errorMessage": Object {
+    "branch": "branch must be a string",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative post bank_account -- As a Store, I should not be able to add my bank account if the value of accountName more than 50 char 1`] = `
+Object {
+  "code": 40010000001,
+  "errorMessage": Object {
+    "accountName": "accountName must be shorter than or equal to 50 characters",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative post bank_account -- As a Store, I should not be able to add my bank account if the value of branch more than 50 char 1`] = `
+Object {
+  "code": 40010000001,
+  "errorMessage": Object {
+    "branch": "branch must be shorter than or equal to 50 characters",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative post bank_account -- As a Store, I should not be able to add my bank account with wrongOTP 1`] = `
+Object {
+  "code": 11050,
+  "errorMessage": "Invalid code or otp has been expired",
+  "message": "Otp Code",
+  "status": 400,
+  "type": "BAD_REQUEST",
+}
+`;
+
+exports[`@negative post bank_account -- As a Store, I should not be able to add my bank account without accountName 1`] = `
+Object {
+  "code": 40010000001,
+  "errorMessage": Object {
+    "accountName": "accountName should not be empty",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative post bank_account -- As a Store, I should not be able to add my bank account without accountNo 1`] = `
+Object {
+  "code": 40010000001,
+  "errorMessage": Object {
+    "accountNo": "accountNo should not be empty",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative post bank_account -- As a Store, I should not be able to add my bank account without bankId 1`] = `
+Object {
+  "code": 40010000001,
+  "errorMessage": Object {
+    "bankId": "bankId should not be empty",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@positive post bank_account -- As a Store, I should be able to add my bank account 1`] = `
+Object {
+  "data": Object {
+    "message": "Otp code is verified",
+  },
+}
+`;
+
+exports[`@positive post bank_account -- As a Store, I should be able to add my bank account if the value of accountName is 50 char 1`] = `
+Object {
+  "data": Object {
+    "message": "Otp code is verified",
+  },
+}
+`;
+
+exports[`@positive post bank_account -- As a Store, I should be able to add the branch on my bank account 1`] = `
+Object {
+  "data": Object {
+    "message": "Otp code is verified",
+  },
+}
+`;
+
+exports[`@positive post bank_account -- As a Store, I should be able to edit my bank account 1`] = `
+Object {
+  "data": Object {
+    "message": "Otp code is verified",
+  },
+}
+`;

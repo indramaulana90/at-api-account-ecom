@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`@negative get user_list -- As a Supplier Admin, I should not be able to get user list because keyword less than 3 chars 1`] = `
+Object {
+  "code": 40020000001,
+  "errorMessage": Object {
+    "keyword": "keyword must be longer than or equal to 3 characters",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative get user_list -- As a Supplier Admin, I should not be able to get user list because sortKey is invalid 1`] = `
+Object {
+  "code": 40020000001,
+  "errorMessage": Object {
+    "sortKey": "sortKey must be one of the following values: createdAt,updatedAt",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative get user_list -- As a Supplier Admin, I should not be able to get user list because sortType is invalid 1`] = `
+Object {
+  "code": 40020000001,
+  "errorMessage": Object {
+    "sortType": "sortType must be one of the following values: asc,desc",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;

@@ -1,0 +1,155 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`@negative patch user_medea_verify -- As a Store, I should not be able to verification user medea because address not set 1`] = `
+Object {
+  "code": 40020000001,
+  "errorMessage": Object {
+    "address": "address should not be empty",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative patch user_medea_verify -- As a Store, I should not be able to verification user medea because buyer name not set 1`] = `
+Object {
+  "code": 40020000001,
+  "errorMessage": Object {
+    "buyerName": "buyerName should not be empty",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative patch user_medea_verify -- As a Store, I should not be able to verification user medea because id no not set 1`] = `
+Object {
+  "code": 40020000001,
+  "errorMessage": Object {
+    "idNo": "idNo should not be empty",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative patch user_medea_verify -- As a Store, I should not be able to verification user medea because owner name not set 1`] = `
+Object {
+  "code": 40020000001,
+  "errorMessage": Object {
+    "ownerName": "ownerName should not be empty",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative patch user_medea_verify -- As a Store, I should not be able to verification user medea because owner phone number not set 1`] = `
+Object {
+  "code": 40020000001,
+  "errorMessage": Object {
+    "ownerPhoneNumber": "ownerPhoneNumber should not be empty",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative patch user_medea_verify -- As a Store, I should not be able to verification user medea because set integer on address 1`] = `
+Object {
+  "code": 40020000001,
+  "errorMessage": Object {
+    "address": "address must be a string",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative patch user_medea_verify -- As a Store, I should not be able to verification user medea because set integer on buyer name 1`] = `
+Object {
+  "code": 40020000001,
+  "errorMessage": Object {
+    "buyerName": "buyerName must be a string",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative patch user_medea_verify -- As a Store, I should not be able to verification user medea because set integer on id no 1`] = `
+Object {
+  "code": 40020000001,
+  "errorMessage": Object {
+    "idNo": "idNo must be a number string",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative patch user_medea_verify -- As a Store, I should not be able to verification user medea because set integer on owner name 1`] = `
+Object {
+  "code": 40020000001,
+  "errorMessage": Object {
+    "ownerName": "ownerName must be a string",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative patch user_medea_verify -- As a Store, I should not be able to verification user medea because set null on address 1`] = `
+Object {
+  "code": 40020000001,
+  "errorMessage": Object {
+    "address": "address should not be empty",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative patch user_medea_verify -- As a Store, I should not be able to verification user medea because set null on buyer name 1`] = `
+Object {
+  "code": 40020000001,
+  "errorMessage": Object {
+    "buyerName": "buyerName should not be empty",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative patch user_medea_verify -- As a Store, I should not be able to verification user medea because set null on id no 1`] = `
+Object {
+  "code": 40020000001,
+  "errorMessage": Object {
+    "idNo": "idNo should not be empty",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative patch user_medea_verify -- As a Store, I should not be able to verification user medea because set null on owner name 1`] = `
+Object {
+  "code": 40020000001,
+  "errorMessage": Object {
+    "ownerName": "ownerName should not be empty",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative patch user_medea_verify -- As a Store, I should not be able to verification user medea because set null on owner phone number 1`] = `
+Object {
+  "code": 40020000001,
+  "errorMessage": Object {
+    "ownerPhoneNumber": "ownerPhoneNumber should not be empty",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;

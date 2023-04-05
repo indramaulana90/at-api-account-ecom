@@ -1,0 +1,55 @@
+{
+    "type": "object",
+    "properties": {
+      "data": {
+        "type": "array",
+        "items": [
+          {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "urban": {
+                "type": "string"
+              },
+              "zipCode": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "urban",
+              "zipCode"
+            ]
+          }
+        ]
+      },
+      "meta": {
+        "type": "object",
+        "properties": {
+          "limit": {
+            "type": "integer"
+          },
+          "total": {
+            "type": "integer"
+          },
+          "skip": {
+            "type": "integer"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "limit",
+          "total",
+          "skip"
+        ]
+      }
+    },
+    "additionalProperties": false,
+    "required": [
+      "data",
+      "meta"
+    ]
+  }

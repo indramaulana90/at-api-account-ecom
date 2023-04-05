@@ -1,0 +1,29 @@
+/**
+* Author      : Rifki M (rifki.mifathur@sinbad.co.id)
+* Modifier    :
+* Domain      : account
+* Description : This File for Provide Testcase on API post_mobile_phone_number
+*/
+
+export default {
+  describe: 'post mobile_phone_number --',
+  type: ['@negative', '@positive'],
+  author: 'rifki.mifathur@sinbad.co.id',
+  positive: {
+    changeMobilePhoneNumber: 'As a Store, I should be able to change phone number with valid format',
+  },
+  negative: {
+    invalidFormatNumber: 'As a Store, I should not be able to change Phone Number with invalid Format does not start with 08',
+    newMobilePhoneNumber9Char: 'As a Store, I should not be able to change phone number if new Phone Number less than 10 Characters',
+    newMobilePhoneNumber15Char: 'As a Store, I should not be able to changeg phone number  if new Phone Number more than 14 Characters',
+    newMobilePhoneNumbernotChange: 'As a Store, I should not be able to change phone number  if new Phone Number same with old Phone Number',
+    emptynewMobilePhoneNumber: 'As a Store, I should not able to change mobile phone number if new mobile phone number empty',
+    invalidOtpCode: 'As a Store, I should not be able to change phone number with invalid Otp Code Verification',
+    emptyOtpCode : 'A s a Store, I should not be able to change phone number if Otp Code Verification is empty ', 
+    xPlatformInvalid: 'As a Store, I should not be able to change phone number because set invalid on x-platform header',
+    xPlatformNotSet: 'As a Store, I should not be able to change phone number because x-platform header is not set',
+    invalidCookies: 'As a Store, I should not be able to change phone number because cookies set to Invalid',
+    nullCookies: 'As a Store, I should not be able to change phone number because cookies set to Null',
+    emptyCookies: 'As a Store, I should not be able to change phone number because cookies set to Empty',
+  },
+};

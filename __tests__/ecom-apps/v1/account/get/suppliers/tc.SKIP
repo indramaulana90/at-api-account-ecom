@@ -1,0 +1,27 @@
+/**
+* Author      : Evinna Ginola Utama (evinna.ginola@sinbad.co.id)
+* Modifier    :
+* Domain      : account
+* Description : This File for Provide Testcase on API get_suppliers
+*/
+
+export default {
+  describe: 'get suppliers --',
+  type: ['@negative', '@positive'],
+  author: 'evinna.ginola@sinbad.co.id',
+  positive: {
+    default: 'As a Store, I should be able to see my suppliers',
+    withPage: 'As a Store, I should be able to see my suppliers with param Page',
+    withPerPage: 'As a Store, I should be able to see my suppliers with param perPage',
+    withPageAndPerPage: 'As a Store, I should be able to see my suppliers with param page and perPage',
+  },
+  negative: {
+    invalidPage: 'As a Store, I should not be able to see my suppliers because param page is invalid',
+    invalidPerPage: 'As a Store, I should not be able to see my suppliers because param perPage is invalid',
+    xPlatformInvalid: 'As a Store, I should not be able to see my suppliers because set invalid on x-platform header',
+    xPlatformNotSet: 'As a Store, I should not be able to see my suppliers because x-platform header is not set',
+    invalidCookies: 'As a Store, I should not be able to see my suppliers because cookies set to Invalid',
+    nullCookies: 'As a Store, I should not be able to see my suppliers because cookies set to Null',
+    emptyCookies: 'As a Store, I should not be able to see my suppliers because cookies set to Empty',
+  },
+};

@@ -1,0 +1,153 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`@negative post create_role -- As a Supplier Admin, I should not be able to create new role because capabilities is empty string 1`] = `
+Object {
+  "code": 40020000001,
+  "errorMessage": Object {
+    "capabilities": "capabilities should not be empty",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative post create_role -- As a Supplier Admin, I should not be able to create new role because capabilities is not set 1`] = `
+Object {
+  "code": 40020000001,
+  "errorMessage": Object {
+    "capabilities": "capabilities should not be empty",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative post create_role -- As a Supplier Admin, I should not be able to create new role because capabilities is null 1`] = `
+Object {
+  "code": 40020000001,
+  "errorMessage": Object {
+    "capabilities": "capabilities should not be empty",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative post create_role -- As a Supplier Admin, I should not be able to create new role because desc is empty string 1`] = `
+Object {
+  "code": 40020000001,
+  "errorMessage": Object {
+    "description": "description should not be empty",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative post create_role -- As a Supplier Admin, I should not be able to create new role because desc is less than 5 chars 1`] = `
+Object {
+  "code": 40020000001,
+  "errorMessage": Object {
+    "description": "description must be longer than or equal to 5 characters",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative post create_role -- As a Supplier Admin, I should not be able to create new role because desc is more than 1000 chars 1`] = `
+Object {
+  "code": 40020000001,
+  "errorMessage": Object {
+    "description": "description must be shorter than or equal to 1000 characters",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative post create_role -- As a Supplier Admin, I should not be able to create new role because desc is not set 1`] = `
+Object {
+  "code": 40020000001,
+  "errorMessage": Object {
+    "description": "description should not be empty",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative post create_role -- As a Supplier Admin, I should not be able to create new role because desc is null 1`] = `
+Object {
+  "code": 40020000001,
+  "errorMessage": Object {
+    "description": "description should not be empty",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative post create_role -- As a Supplier Admin, I should not be able to create new role because role name is already exists 1`] = `
+Object {
+  "code": 40020000341,
+  "errorMessage": "Role is exists",
+  "message": "Please choose another role",
+  "type": "BAD_REQUEST",
+}
+`;
+
+exports[`@negative post create_role -- As a Supplier Admin, I should not be able to create new role because role name is empty string 1`] = `
+Object {
+  "code": 40020000001,
+  "errorMessage": Object {
+    "name": "name should not be empty",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative post create_role -- As a Supplier Admin, I should not be able to create new role because role name is less than 3 chars 1`] = `
+Object {
+  "code": 40020000001,
+  "errorMessage": Object {
+    "name": "name must be longer than or equal to 3 characters",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative post create_role -- As a Supplier Admin, I should not be able to create new role because role name is more than 50 chars 1`] = `
+Object {
+  "code": 40020000001,
+  "errorMessage": Object {
+    "name": "name must be shorter than or equal to 50 characters",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative post create_role -- As a Supplier Admin, I should not be able to create new role because role name is not set 1`] = `
+Object {
+  "code": 40020000001,
+  "errorMessage": Object {
+    "name": "name should not be empty",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative post create_role -- As a Supplier Admin, I should not be able to create new role because role name is null 1`] = `
+Object {
+  "code": 40020000001,
+  "errorMessage": Object {
+    "name": "name should not be empty",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;

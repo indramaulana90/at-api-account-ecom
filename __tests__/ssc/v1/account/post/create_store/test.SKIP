@@ -1,0 +1,170 @@
+/**
+* Author      : yosua siagian (yosua@sinbad.co.id)
+* Modifier    :
+* Domain      : account
+* Description : This Main File for Testing on API post_create_store
+*/
+
+import getDataFromPool from '@at-api-core/get-data-from-pool';
+import * as er from '@at-api-core/expect-response';
+import endpoint from './endpoint';
+import * as data from './data';
+import tc from './tc';
+import schema from './schema.json';
+// import schemaError from '../../../../../../../helper/schema/schema_error_create_store.json';
+import rs from '../../../../../../helper/responseStatusLibrary.json';
+import { deleteByRejectionStoreId as sdDeleteRejectionSupplierStores } from '../../../../../data/model/v1/account/rejection_supplier_stores';
+import * as seedSupplierStores from '../../../../../data/model/v1/account/supplier_stores';
+import * as seedBuyerId from '../../../../../data/model/v1/account/buyers';
+import { deleteUserRolesByUserId as sdDeleteUserRoles } from '../../../../../data/model/v1/account/map_user_roles';
+import { deleteAuthByNumber as sdSelectAuthByNumber } from '../../../../../data/model/v1/auth/auth';
+import { selectByNumber as sdSelectUsers, deleteBymobilePhone as sdDeleteUser } from '../../../../../data/model/v1/account/users';
+
+const { cookies } = getDataFromPool('seller-center', 'TRS_admin.trs@sinbad.co.id');
+
+let supplierStoreId;
+let mobilePhone;
+
+// this test is deprecated, since NG does not have function to create an store from SSC
+
+
+
+
+describe(`@positive ${tc.describe}`, () => {
+  afterEach(async () => {
+    await sdDeleteRejectionSupplierStores({ idRejectionSupplierStores: supplierStoreId });
+    await seedBuyerId.deleteBySupplierStoreId({ idBuyers: supplierStoreId });
+    await sdDeleteUserRoles({ userPhone: mobilePhone });
+    await sdDeleteUser({ userMobilePhone: mobilePhone });
+    await sdSelectAuthByNumber({ mobilePhoneAuth: mobilePhone });
+  });
+
+  test(`${tc.positive.mandatory}`, async () => {
+    const payload = data.storeRequiredOnly();
+    payload.user.email = (payload.user.email).toLowerCase();
+    resp = await endpoint(payload, cookies);
+    const arrDBUser = await sdSelectUsers(payload.user.mobilePhone);
+    er.expectStatus(resp, rs.statusCreated);
+    er.expectSchema(resp, schema);
+    const objectFiltered = resp.body.data;
+    const arrDB = await seedSupplierStores.selectById(objectFiltered.id);
+    const objectDB = (arrDB)[0];
+    const objectDBUser = (arrDBUser)[0];
+    supplierStoreId = objectDB.id;
+    mobilePhone = objectDBUser.mobile_phone;
+    er.expectEqualDB(resp, objectFiltered, objectDB, data.compareDB);
+    er.expectEqualDB(resp, payload, objectDB, data.compareDBBodyApi);
+    er.expectEqualDB(resp, payload, objectDBUser, data.compareDBBodyApiUser);
+  });
+});
+
+describe(`@negative ${tc.describe}`, () => {
+  afterEach(async () => {
+    await sdDeleteRejectionSupplierStores({ idRejectionSupplierStores: supplierStoreId });
+    await seedBuyerId.deleteBySupplierStoreId({ idBuyers: supplierStoreId });
+    await sdDeleteUserRoles({ userPhone: mobilePhone });
+    await sdDeleteUser({ userMobilePhone: mobilePhone });
+    await sdSelectAuthByNumber({ mobilePhoneAuth: mobilePhone });
+  });
+
+  test(`${tc.negative.createStoreRejected}`, async () => {
+    const payload = data.storeRequiredOnly();
+    payload.user.email = (payload.user.email).toLowerCase();
+    resp = await endpoint(payload, cookies);
+    const arrDBUser = await sdSelectUsers(payload.user.mobilePhone);
+    er.expectStatus(resp, rs.statusCreated);
+    er.expectSchema(resp, schema);
+    const objectFiltered = resp.body.data;
+    const arrDB = await seedSupplierStores.selectById(objectFiltered.id);
+    const objectDB = (arrDB)[0];
+    const objectDBUser = (arrDBUser)[0];
+    supplierStoreId = objectDB.id;
+    mobilePhone = objectDBUser.mobile_phone;
+    er.expectEqualDB(resp, objectFiltered, objectDB, data.compareDB);
+    er.expectEqualDB(resp, payload, objectDB, data.compareDBBodyApi);
+    er.expectEqualDB(resp, payload, objectDBUser, data.compareDBBodyApiUser);
+  });
+});
+
+describe(`@negative ${tc.describe}`, () => {
+  data.loopingError.forEach(async (element) => {
+    test(`${element.title}`, async () => {
+      const queryParam = data.storeRequiredOnly();
+      queryParam[Object.keys(element.value)] = Object.values(element.value)[0];
+
+      resp = await endpoint(queryParam, cookies);
+      try {
+        er.expectStatus(resp, rs.statusBadRequest);
+        er.expectSnapshot(resp);
+      } catch (error) {
+        if (resp.status === 201) {
+          mobilePhone = queryParam.user.mobilePhone;
+
+          const objectFiltered = resp.body.data;
+          const arrDB = await seedSupplierStores.selectById(objectFiltered.id);
+          const objectDB = (arrDB)[0];
+          supplierStoreId = objectDB.id;
+
+          await sdDeleteRejectionSupplierStores({ idRejectionSupplierStores: supplierStoreId });
+          await seedBuyerId.deleteBySupplierStoreId({ idBuyers: supplierStoreId });
+          await sdDeleteUserRoles({ userPhone: mobilePhone });
+          await sdDeleteUser({ userMobilePhone: mobilePhone });
+          await sdSelectAuthByNumber({ mobilePhoneAuth: mobilePhone });
+        }
+      }
+    });
+  });
+});
+
+describe(`@negative ${tc.describe}`, () => {
+  test(`${tc.negative.xPlatformInvalid}`, async () => {
+    const payload = data.storeRequiredOnly();
+
+    resp = await endpoint(cookies, payload).set('x-platform', 'sinbad-app');
+    er.expectStatus(resp, rs.statusUnauthorized);
+    er.expectUnauthorized(resp);
+    er.expectSnapshot(resp);
+  });
+  test(`${tc.negative.xPlatformNotSet}`, async () => {
+    const payload = data.storeRequiredOnly();
+
+    resp = await endpoint(cookies, payload).unset('x-platform');
+    er.expectStatus(resp, rs.statusUnauthorized);
+    er.expectUnauthorized(resp);
+    er.expectSnapshot(resp);
+  });
+
+  test(`${tc.negative.xPlatformINull}`, async () => {
+    const payload = data.storeRequiredOnly();
+
+    resp = await endpoint(cookies, payload).set('x-platform', null);
+    er.expectStatus(resp, rs.statusUnauthorized);
+  });
+
+  test(`${tc.negative.xPlatformInvalid}`, async () => {
+    const payload = data.storeRequiredOnly();
+
+    resp = await endpoint(cookies, payload).set('x-platform', 'error');
+    er.expectStatus(resp, rs.statusUnauthorized);
+    er.expectUnauthorized(resp);
+  });
+
+  test(`${tc.negative.xPlatformNotSet}`, async () => {
+    const payload = data.storeRequiredOnly();
+
+    resp = await endpoint(cookies, payload).unset('x-platform');
+    er.expectStatus(resp, rs.statusUnauthorized);
+    er.expectUnauthorized(resp);
+  });
+
+  data.loopingErrorCookies.forEach(async (element) => {
+    test(`${element.title}`, async () => {
+      const payload = data.storeRequiredOnly();
+      const cookiesNegative = element.value;
+
+      resp = await endpoint(cookiesNegative, payload);
+      er.expectStatus(resp, rs.statusUnauthorized);
+      er.expectUnauthorized(resp);
+    });
+  });
+});

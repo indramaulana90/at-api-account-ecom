@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`@negative post email_verification -- As a Store, I should not be able to add email if the email address has been used 1`] = `
+Object {
+  "code": 40020000031,
+  "errorMessage": "This email address has been used. Please use another one.",
+  "message": "Email not available",
+  "type": "BAD_REQUEST",
+}
+`;
+
+exports[`@negative post email_verification -- As a Store, I should not be able to add my email if the OTP is null 1`] = `
+Object {
+  "code": 10120000422,
+  "errorMessage": Object {
+    "code": "RequestVerificationEmailDto.code must be a number string",
+  },
+  "message": "Data yang terkirim tidak sesuai validasi",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative post email_verification -- As a Store, I should not be able to add my email with invalid OTP 1`] = `
+Object {
+  "code": 11050,
+  "errorMessage": "Invalid code or otp has been expired",
+  "message": "Otp Code",
+  "status": 400,
+  "type": "BAD_REQUEST",
+}
+`;
+
+exports[`@negative post email_verification -- As a Store, I should not be able to add my email with invalid format 1`] = `
+Object {
+  "code": 40010000001,
+  "errorMessage": Object {
+    "email": "email must be an email",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative post email_verification -- As a Store, I should not be able to add my email with null value 1`] = `
+Object {
+  "code": 40020000084,
+  "errorMessage": "Email can not be empty",
+  "message": "Email required",
+  "type": "BAD_REQUEST",
+}
+`;
+
+exports[`@positive post email_verification -- As a Store, I should be able to add and verify my email 1`] = `
+Object {
+  "data": Object {
+    "message": "Otp code is verified",
+  },
+}
+`;
+
+exports[`@positive post email_verification -- As a Store, I should be able to change and verify my email 1`] = `
+Object {
+  "data": Object {
+    "message": "Otp code is verified",
+  },
+}
+`;
+
+exports[`@positive post email_verification -- As a Store, I should be able to verify my existing email 1`] = `
+Object {
+  "data": Object {
+    "message": "Otp code is verified",
+  },
+}
+`;

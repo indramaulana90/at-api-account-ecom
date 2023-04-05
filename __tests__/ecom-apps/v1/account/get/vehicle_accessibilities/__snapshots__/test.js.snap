@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`@negative get vehicle_accessibilities -- As a Store, I should not be able to get all list of bank with x-platform empty 1`] = `Object {}`;
+
+exports[`@negative get vehicle_accessibilities -- As a Store, I should not be able to get all list of bank with x-platform null 1`] = `Object {}`;
+
+exports[`@negative get vehicle_accessibilities -- As a Store, I should not be able to get list of vehicle accessibilities because cookies set to Empty 1`] = `Object {}`;
+
+exports[`@negative get vehicle_accessibilities -- As a Store, I should not be able to get list of vehicle accessibilities because cookies set to Invalid 1`] = `Object {}`;
+
+exports[`@negative get vehicle_accessibilities -- As a Store, I should not be able to get list of vehicle accessibilities because cookies set to Null 1`] = `Object {}`;
+
+exports[`@negative get vehicle_accessibilities -- As a Store, I should not be able to get list of vehicle accessibilities because set invalid on x-platform header 1`] = `Object {}`;
+
+exports[`@negative get vehicle_accessibilities -- As a Store, I should not be able to get list of vehicle accessibilities because x-platform header is not set 1`] = `Object {}`;
+
+exports[`@negative get vehicle_accessibilities -- As a Store, I should not be able to get list of vehicle accessibilities if the keyword does not match with any data 1`] = `
+Object {
+  "data": Array [],
+}
+`;
+
+exports[`@positive get vehicle_accessibilities -- As a Store, I should be able to get all list of vehicle accessibilities 1`] = `
+Object {
+  "data": Array [
+    Object {
+      "id": 1,
+      "name": "Mobil Box",
+    },
+    Object {
+      "id": 2,
+      "name": "Pick Up",
+    },
+    Object {
+      "id": 3,
+      "name": "Truck",
+    },
+    Object {
+      "id": 4,
+      "name": "Motor Bak",
+    },
+  ],
+}
+`;

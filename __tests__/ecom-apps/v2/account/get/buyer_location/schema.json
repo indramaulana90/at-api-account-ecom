@@ -1,0 +1,95 @@
+{
+    "type": "object",
+    "properties": {
+      "data": {
+        "type": "object",
+        "properties": {
+          "buyerId": {
+            "type": "integer"
+          },
+          "buyerName": {
+            "type": "string"
+          },
+          "latitude": {
+            "type": "string"
+          },
+          "longitude": {
+            "type": "string"
+          },
+          "province": {
+            "anyOf": [
+                { "type": "null" },
+                { "type": "string" }
+              ]
+          },
+          "city": {
+            "anyOf": [
+                { "type": "null" },
+                { "type": "string" }
+              ]
+          },
+          "district": {
+            "anyOf": [
+                { "type": "null" },
+                { "type": "string" }
+              ]
+          },
+          "urban": {
+            "anyOf": [
+                { "type": "null" },
+                { "type": "string" }
+              ]
+          },
+          "zipCode": {
+            "anyOf": [
+                { "type": "null" },
+                { "type": "string" }
+              ]
+          },
+          "address": {
+            "type": "string"
+          },
+          "noteAddress": {
+            "anyOf": [
+              { "type": "null" },
+              { "type": "string" }
+            ]
+        },
+          "locationId": {
+            "anyOf": [
+                { "type": "null" },
+                { "type": "string" }
+              ]
+          },
+          "imageId": {
+            "anyOf": [
+              { "type": "null" },
+              { "type": "string" }
+            ]
+          },
+          "isImageIdOcrValidation": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": true,
+        "required": [
+          "buyerId",
+          "buyerName",
+          "latitude",
+          "longitude",
+          "province",
+          "city",
+          "district",
+          "urban",
+          "zipCode",
+          "address",
+          "noteAddress",
+          "locationId"
+        ]
+      }
+    },
+    "additionalProperties": false,
+    "required": [
+      "data"
+    ]
+}

@@ -1,0 +1,8 @@
+node_modules
+reports
+jest_html_reporters.html
+config.gypi
+tmp
+
+#macOS
+.DS_STORE

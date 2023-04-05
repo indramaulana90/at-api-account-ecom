@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`@negative get employee_internal_list -- As a Supplier Admin, I should not be able to get list of employee internal because keyword is wrong 1`] = `
+Object {
+  "data": Array [],
+  "meta": Object {
+    "limit": 10,
+    "skip": 0,
+    "total": 77,
+  },
+}
+`;
+
+exports[`@negative get employee_internal_list -- As a Supplier Admin, I should not be able to get list of employee internal because set invalid type on keyword 1`] = `
+Object {
+  "data": Array [],
+  "meta": Object {
+    "limit": 10,
+    "skip": 0,
+    "total": 77,
+  },
+}
+`;
+
+exports[`@negative get employee_internal_list -- As a Supplier Admin, I should not be able to get list of employee internal because set string on limit 1`] = `
+Object {
+  "code": 12094,
+  "errorMessage": "Limit must be a number string",
+  "message": "Invalid limit type",
+  "status": 400,
+  "type": "BAD_REQUEST",
+}
+`;
+
+exports[`@negative get employee_internal_list -- As a Supplier Admin, I should not be able to get list of employee internal because set string on skip 1`] = `
+Object {
+  "code": 12092,
+  "errorMessage": "Skip must be a number string",
+  "message": "Invalid skip type",
+  "status": 400,
+  "type": "BAD_REQUEST",
+}
+`;

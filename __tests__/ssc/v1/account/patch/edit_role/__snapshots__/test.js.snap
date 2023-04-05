@@ -1,0 +1,140 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`@negative patch edit_role -- As a Supplier Admin, I should not be able to edit existing role because capabilities is empty string 1`] = `
+Object {
+  "code": 40020000001,
+  "errorMessage": Object {
+    "capabilities": "capabilities must be an object",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative patch edit_role -- As a Supplier Admin, I should not be able to edit existing role because desc is empty string 1`] = `
+Object {
+  "code": 40020000001,
+  "errorMessage": Object {
+    "description": "description must be longer than or equal to 5 characters",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative patch edit_role -- As a Supplier Admin, I should not be able to edit existing role because desc is less than 5 chars 1`] = `
+Object {
+  "code": 40020000001,
+  "errorMessage": Object {
+    "description": "description must be longer than or equal to 5 characters",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative patch edit_role -- As a Supplier Admin, I should not be able to edit existing role because desc is more than 1000 chars 1`] = `
+Object {
+  "code": 40020000001,
+  "errorMessage": Object {
+    "description": "description must be shorter than or equal to 1000 characters",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative patch edit_role -- As a Supplier Admin, I should not be able to edit existing role because id role is empty string 1`] = `
+Object {
+  "code": 40020000001,
+  "errorMessage": Object {
+    "id": "id should not be empty",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative patch edit_role -- As a Supplier Admin, I should not be able to edit existing role because id role is invalid 1`] = `
+Object {
+  "code": 40020000001,
+  "errorMessage": Object {
+    "id": "id must be a number conforming to the specified constraints",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative patch edit_role -- As a Supplier Admin, I should not be able to edit existing role because id role is not found 1`] = `
+Object {
+  "code": 40020000339,
+  "errorMessage": "Role Not Found",
+  "message": "Role not found",
+  "type": "NOT_FOUND",
+}
+`;
+
+exports[`@negative patch edit_role -- As a Supplier Admin, I should not be able to edit existing role because id role is not set 1`] = `
+Object {
+  "code": 40020000001,
+  "errorMessage": Object {
+    "id": "id should not be empty",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative patch edit_role -- As a Supplier Admin, I should not be able to edit existing role because id role is null 1`] = `
+Object {
+  "code": 40020000001,
+  "errorMessage": Object {
+    "id": "id should not be empty",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative patch edit_role -- As a Supplier Admin, I should not be able to edit existing role because role name is already exists 1`] = `
+Object {
+  "code": 40020000341,
+  "errorMessage": "Role is exists",
+  "message": "Please choose another role",
+  "type": "BAD_REQUEST",
+}
+`;
+
+exports[`@negative patch edit_role -- As a Supplier Admin, I should not be able to edit existing role because role name is empty string 1`] = `
+Object {
+  "code": 40020000001,
+  "errorMessage": Object {
+    "name": "name must be longer than or equal to 3 characters",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative patch edit_role -- As a Supplier Admin, I should not be able to edit existing role because role name is less than 3 chars 1`] = `
+Object {
+  "code": 40020000001,
+  "errorMessage": Object {
+    "name": "name must be longer than or equal to 3 characters",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative patch edit_role -- As a Supplier Admin, I should not be able to edit existing role because role name is more than 50 chars 1`] = `
+Object {
+  "code": 40020000001,
+  "errorMessage": Object {
+    "name": "name must be shorter than or equal to 50 characters",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;

@@ -1,0 +1,118 @@
+{
+    "banners":{
+        "name": "ATAPI ${params.atName} Banner Name",
+        "header": "ATAPI${params.atName} Header",
+        "description": "ATAPI ${params.atName} Description",
+        "termAndCondition": "<p>• Berlaku untuk user dari semua tier</p><p>• Pembelian min 1.000.000 untuk SKU (SGM 300gr)</p><p>• Tidak berlaku kelipatan</p>"
+    },
+    "brands": {
+        "name": "ATAPI ${params.atName} Brand Name",
+        "code": "ATAPI${params.atName}Brand"
+    },
+    "buyers": {
+        "name": "ATAPI ${params.atName} Buyers Name",
+        "address": "ATAPI ${params.atName} Address"
+    },
+    "catalogues": {
+        "name": "ATAPI ${params.atName} Catalogue Name",
+        "code": "ATAPI${params.atName}Cata",
+        "detail": "ATAPI ${params.atName} Catalogue Detail",
+        "description": "ATAPI ${params.atName} Catalogue Description",
+        "information": "ATAPI ${params.atName} Catalogue Information"
+    },
+    "catalogueCategories": {
+        "name": "ATAPI ${params.atName} Category Name",
+        "code": "ATAPI${params.atName}CCat"
+    },
+    "catalogueUnits": {
+        "name": "ATAPI ${params.atName} Catalogue Unit Name"
+    },
+    "channels": {
+        "name": "ATAPI ${params.atName} Channel Name",
+        "externalId": "ATAPI${params.atName}Chan",
+        "description": "ATAPI ${params.atName} Description"
+    },
+    "clusters": {
+        "name": "ATAPI ${params.atName} Cluster Name",
+        "externalId": "ATAPI${params.atName}Clus",
+        "description": "ATAPI ${params.atName} Description"
+    },
+    "groups": {
+        "name": "ATAPI ${params.atName} Group Name",
+        "externalId": "ATAPI${params.atName}Grup",
+        "description": "ATAPI ${params.atName} Description"
+    },
+    "invoiceGroups": {
+        "name": "ATAPI ${params.atName} Invoice Group name",
+        "code": "ATAPI${params.atName}InGr",
+        "externalId": "ATAPI${params.atName}InGr"
+    },
+    "mssCatalogues": {
+        "name": "ATAPI ${params.atName} MssCatalogues Name",
+        "externalId": "ATAPI${params.atName}MSS"
+    },
+    "portfolios": {
+        "name": "ATAPI ${params.atName} Portfolio Name",
+        "externalId": "ATAPI${params.atName}Ptfl"
+    },
+    "products": {
+        "name": "ATAPI ${params.atName} Product Name",
+        "externalId": "ATAPI${params.atName}Pdct"
+    },
+    "stores": {
+        "address": "ATAPI ${params.atName} Stores Address",
+        "name": "ATAPI ${params.atName} Stores Name",
+        "noteAddress": "ATAPI ${params.atName} Stores Note Address",
+        "externalId": "ATAPI${params.atName}Strs"
+    },
+    "salesRep": {
+        "name": "ATAPI ${params.atName} Users Sales fullname",
+        "externalId": "ATAPI${params.atName}UsSl"
+    },
+    "salesTeamStoreChannels": {
+        "name": "ATAPI ${params.atName} ST Store Channels Name"
+    },
+    "types": {
+        "name": "ATAPI ${params.atName} Type Name",
+        "externalId": "ATAPI${params.atName}Type",
+        "description": "ATAPI ${params.atName} Description"
+    },
+    "urbans": {
+        "city": "ATAPI ${params.atName} City",
+        "district": "ATAPI ${params.atName} District",
+        "urban": "ATAPI ${params.atName} Urban"
+    },
+    "users": {
+        "fullname": "ATAPI ${params.atName} users fullname",
+        "email":"ATAPI${params.atName}@atapi.com",
+        "userCode": "ATAPI${params.atName}Usrs"
+    },
+    "usersSales": {
+        "fullname": "ATAPI ${params.atName} users sales fullname",
+        "email":"ATAPI${params.atName}@sales.com",
+        "userCode": "ATAPI${params.atName}UsSl"
+    },
+    "vouchers": {
+        "name": "ATAPI {params.atName} Name",
+        "externalId": "ATAPI${params.atName}Vouc",
+        "code": "${params.atName}",
+        "description": "ATAPI ${params.atName} Description",
+        "header":"ATAPI ${params.atName} Header",
+        "terms": "{ATAPI ${params.atName} Terms and Condition}",
+        "instructions": "{ATAPI ${params.atName} Instructions}",
+        "tag": "{ATAPI ${params.atName} Tag}"
+    },
+    "warehouses": {
+        "name": "ATAPI ${params.atName} Warehouse name",
+        "code": "ATAPI${params.atName}WH",
+        "externalId": "ATAPI${params.atName}WH",
+        "noteAddress": "ATAPI ${params.atName} Note Address",
+        "address": "ATAPI ${params.atName} Address"
+    },
+    "warehouseValues": {
+        "name": "ATAPI ${params.atName} Warehouse Value name"
+    },
+    "warehouseTemperatures": {
+        "name": "ATAPI ${params.atName} Warehouse Temperature name"
+    }
+}

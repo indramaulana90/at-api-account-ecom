@@ -1,0 +1,27 @@
+[
+	{
+		"idInvoiceGroups": {
+			"isMongo": true
+		}
+	},
+	{
+		"idInvoiceGroupBrands": {
+			"isMongo": true
+		}
+	},
+	{
+		"idBrands": {
+			"isMongo": true
+		}
+	},
+	{
+		"idProducts": {
+			"isMongo": true
+		}
+	},
+	{
+		"idCart": {
+			"isMongo": true
+		}
+	}
+]

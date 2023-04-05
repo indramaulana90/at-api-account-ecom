@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`@negative delete delete_user -- As a Supplier Admin, I should not be able to delete user because idUser is empty string 1`] = `
+Object {
+  "error": "Not Found",
+  "message": "Cannot DELETE /api/v1/seller-center/user-management/",
+  "statusCode": 404,
+}
+`;
+
+exports[`@negative delete delete_user -- As a Supplier Admin, I should not be able to delete user because idUser is invalid 1`] = `
+Object {
+  "code": 40020000335,
+  "errorMessage": "ID must be a valid number",
+  "message": "Invalid ID",
+  "type": "BAD_REQUEST",
+}
+`;
+
+exports[`@negative delete delete_user -- As a Supplier Admin, I should not be able to delete user because idUser is not found 1`] = `
+Object {
+  "code": 40020000339,
+  "errorMessage": "Data Not Found",
+  "message": "Data not found",
+  "type": "NOT_FOUND",
+}
+`;
+
+exports[`@negative delete delete_user -- As a Supplier Admin, I should not be able to delete user because idUser is null 1`] = `
+Object {
+  "code": 40020000335,
+  "errorMessage": "ID must be a valid number",
+  "message": "Invalid ID",
+  "type": "BAD_REQUEST",
+}
+`;

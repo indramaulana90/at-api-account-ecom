@@ -1,0 +1,47 @@
+{
+    "type": "object",
+    "properties": {
+      "data": {
+        "type": "array",
+        "items": [
+          {
+            "type": "object",
+            "properties": {
+              "city": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "city"
+            ]
+          }
+        ]
+      },
+      "meta": {
+        "type": "object",
+        "properties": {
+          "limit": {
+            "type": "integer"
+          },
+          "total": {
+            "type": "integer"
+          },
+          "skip": {
+            "type": "integer"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "limit",
+          "total",
+          "skip"
+        ]
+      }
+    },
+    "additionalProperties": false,
+    "required": [
+      "data",
+      "meta"
+    ]
+}

@@ -1,0 +1,252 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`@negative patch complete_data_buyer -- As a Store, I should not be able to update my email if it does not match the email format 1`] = `
+Object {
+  "code": 40010000001,
+  "errorMessage": Object {
+    "email": "Email must be valid email format",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative patch complete_data_buyer -- As a Store, I should not be able to update my id image if the type is not a string 1`] = `
+Object {
+  "code": 40010000001,
+  "errorMessage": Object {
+    "idImageUrl": "idImageUrl must be an URL address",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative patch complete_data_buyer -- As a Store, I should not be able to update my idNo if less than 16 char 1`] = `
+Object {
+  "code": 40010000001,
+  "errorMessage": Object {
+    "idNo": "idNo length must be equal to 16",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative patch complete_data_buyer -- As a Store, I should not be able to update my idNo if more than 16 char 1`] = `
+Object {
+  "code": 40010000001,
+  "errorMessage": Object {
+    "idNo": "idNo length must be equal to 16",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative patch complete_data_buyer -- As a Store, I should not be able to update my idNo if the type is not a number string 1`] = `
+Object {
+  "code": 40010000001,
+  "errorMessage": Object {
+    "idNo": "idNo must be a number string",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative patch complete_data_buyer -- As a Store, I should not be able to update my latitude if the type is a string 1`] = `
+Object {
+  "code": 40010000001,
+  "errorMessage": Object {
+    "latitude": "latitude must be a latitude string or number",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative patch complete_data_buyer -- As a Store, I should not be able to update my locationId with invalid format 1`] = `
+Object {
+  "code": 40010000001,
+  "errorMessage": Object {
+    "locationId": "locationId must be a string",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative patch complete_data_buyer -- As a Store, I should not be able to update my longitude if the type is a string 1`] = `
+Object {
+  "code": 40010000001,
+  "errorMessage": Object {
+    "longitude": "longitude must be a longitude string or number",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative patch complete_data_buyer -- As a Store, I should not be able to update my name if the type is not a string 1`] = `
+Object {
+  "code": 40010000001,
+  "errorMessage": Object {
+    "name": "name must be a string",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative patch complete_data_buyer -- As a Store, I should not be able to update my noteAddress if the type is not a string 1`] = `
+Object {
+  "code": 40010000001,
+  "errorMessage": Object {
+    "noteAddress": "noteAddress must be a string",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative patch complete_data_buyer -- As a Store, I should not be able to update my selfie image if the type is not a string 1`] = `
+Object {
+  "code": 40010000001,
+  "errorMessage": Object {
+    "selfieImageUrl": "selfieImageUrl must be an URL address",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative patch complete_data_buyer -- As a Store, I should not be able to update my store address if the type is not a string 1`] = `
+Object {
+  "code": 40010000001,
+  "errorMessage": Object {
+    "address": "address must be a string",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative patch complete_data_buyer -- As a Store, I should not be able to update my store name if the type is not a string 1`] = `
+Object {
+  "code": 40010000001,
+  "errorMessage": Object {
+    "name": "name must be a string",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative patch complete_data_buyer -- As a Store, I should not be able to update my store phone number if the type is not a number string 1`] = `
+Object {
+  "code": 40010000001,
+  "errorMessage": Object {
+    "phoneNo": "phoneNo must be a number string",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative patch complete_data_buyer -- As a Store, I should not be able to update my store photo if the type is not a string 1`] = `
+Object {
+  "code": 40010000001,
+  "errorMessage": Object {
+    "imageUrl": "imageUrl must be an URL address",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative patch complete_data_buyer -- As a Store, I should not be able to update my tax image if the type is not a string 1`] = `
+Object {
+  "code": 40010000001,
+  "errorMessage": Object {
+    "taxImageUrl": "taxImageUrl must be an URL address",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative patch complete_data_buyer -- As a Store, I should not be able to update my taxNo if less than 15 char 1`] = `
+Object {
+  "code": 40010000001,
+  "errorMessage": Object {
+    "taxNo": "taxNo length must be equal to 15",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative patch complete_data_buyer -- As a Store, I should not be able to update my taxNo if more than 15 char 1`] = `
+Object {
+  "code": 40010000001,
+  "errorMessage": Object {
+    "taxNo": "taxNo length must be equal to 15",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative patch complete_data_buyer -- As a Store, I should not be able to update my taxNo if the type is not a number string 1`] = `
+Object {
+  "code": 40010000001,
+  "errorMessage": Object {
+    "taxNo": "taxNo must be a number string",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative patch complete_data_buyer -- As a Store, I should not be able to update my vehicleAccessibilityAmount if the type is not a number 1`] = `
+Object {
+  "code": 40010000001,
+  "errorMessage": Object {
+    "vehicleAccessibilityAmount": "vehicleAccessibilityAmount must be a number conforming to the specified constraints",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative patch complete_data_buyer -- As a Store, I should not be able to update my vehicleAccessibilityAmount if the value more than 4 1`] = `
+Object {
+  "code": 40010000001,
+  "errorMessage": Object {
+    "vehicleAccessibilityAmount": "vehicleAccessibilityAmount must not be greater than 2",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative patch complete_data_buyer -- As a Store, I should not be able to update my vehicleAccessibilityId if the number does not exist 1`] = `
+Object {
+  "code": 40020000029,
+  "errorMessage": "ID does not exist in table vehicle_accessibilities.",
+  "message": "Invalid vehicleAccessibilityId",
+  "type": "BAD_REQUEST",
+}
+`;
+
+exports[`@negative patch complete_data_buyer -- As a Store, I should not be able to update my vehicleAccessibilityId if the type is not a number 1`] = `
+Object {
+  "code": 40010000001,
+  "errorMessage": Object {
+    "vehicleAccessibilityId": "vehicleAccessibilityId must be a number conforming to the specified constraints",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;

@@ -1,0 +1,36 @@
+/**
+* Author      : Fauzan Novaldi Suteja (fauzan.novaldi@sinbad.co.id)
+* Modifier    :
+* Domain      : account
+* Description : This File for Provide Testcase on API get_city_list
+*/
+
+export default {
+  describe: 'get city_list --',
+  type: ['@negative', '@positive'],
+  author: 'fulki.firosyan@sinbad.co.id', // for no error on auto assigne ATAPI - Xray
+  positive: {
+    requireOnly: 'As a Store, I should be able to get city list with require param only',
+    withKeyword: 'As a Store, I should be able to get city list with keyword',
+    emptyKeyword: 'As a Store, I should be able to get city list with empty keyword',
+    nullKeyword: 'As a Store, I should be able to get city list with null keyword',
+    withSkip: 'As a Store, I should be able to get city list with skip',
+    withLimit: 'As a Store, I should be able to get city list with limit',
+    withSkipLimit: 'As a Store, I should be able to get city list with skip and limit',
+    withAllParams: 'As a Store, I should be able to get city list with all params',
+  },
+  negative: {
+    invalidProvinceId: 'As a Store, I should not be able to get city list because ProvinceId is invalid',
+    stringProvinceId: 'As a Store, I should not be able to get city list because ProvinceId is string',
+    nullProvinceId: 'As a Store, I should not be able to get city list because ProvinceId is null',
+    emptyProvinceId: 'As a Store, I should not be able to get city list because ProvinceId is empty',
+    notFoundKeyword: 'As a Store, I should not be able to get city list with not found keyword',
+    xPlatformInvalid: 'As a Store, I should not be able to get city list because set invalid on x-platform header',
+    xPlatformNotSet: 'As a Store, I should not be able to get city list because x-platform header is not set',
+    xPlatformEmpty: 'As a Store, I should not be able to get city list because set empty on x-platform header',
+    xPlatformNull: 'As a Store, I should not be able to get city list because set null on x-platform header',
+    invalidCookies: 'As a Store, I should not be able to get city list because cookies set to Invalid',
+    nullCookies: 'As a Store, I should not be able to get city list because cookies set to Null',
+    emptyCookies: 'As a Store, I should not be able to get city list because cookies set to Empty',
+  },
+};

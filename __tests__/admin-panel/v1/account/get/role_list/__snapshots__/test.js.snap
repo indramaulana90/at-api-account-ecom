@@ -1,0 +1,117 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`@negative get role_list -- As a Sinbad Admin, I should not be able to get role list because all params are invalid 1`] = `
+Object {
+  "code": 40020000001,
+  "errorMessage": Object {
+    "keyword": "keyword must be longer than or equal to 3 characters",
+    "page": "page must be a number string",
+    "perPage": "perPage must be a number string",
+    "sortKey": "sortKey must be one of the following values: createdAt,updatedAt",
+    "sortType": "sortType must be one of the following values: asc,desc",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative get role_list -- As a Sinbad Admin, I should not be able to get role list because keyword is empty string 1`] = `
+Object {
+  "code": 40020000001,
+  "errorMessage": Object {
+    "keyword": "keyword must be longer than or equal to 3 characters",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative get role_list -- As a Sinbad Admin, I should not be able to get role list because keyword less than 3 characters 1`] = `
+Object {
+  "code": 40020000001,
+  "errorMessage": Object {
+    "keyword": "keyword must be longer than or equal to 3 characters",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative get role_list -- As a Sinbad Admin, I should not be able to get role list because page is invalid 1`] = `
+Object {
+  "code": 40020000001,
+  "errorMessage": Object {
+    "page": "page must be a number string",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative get role_list -- As a Sinbad Admin, I should not be able to get role list because perPage is invalid 1`] = `
+Object {
+  "code": 40020000001,
+  "errorMessage": Object {
+    "perPage": "perPage must be a number string",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative get role_list -- As a Sinbad Admin, I should not be able to get role list because some params are invalid 1`] = `
+Object {
+  "code": 40020000001,
+  "errorMessage": Object {
+    "keyword": "keyword must be longer than or equal to 3 characters",
+    "page": "page must be a number string",
+    "sortType": "sortType must be one of the following values: asc,desc",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative get role_list -- As a Sinbad Admin, I should not be able to get role list because sortKey is empty string 1`] = `
+Object {
+  "code": 40020000001,
+  "errorMessage": Object {
+    "sortKey": "sortKey must be one of the following values: createdAt,updatedAt",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative get role_list -- As a Sinbad Admin, I should not be able to get role list because sortKey is invalid 1`] = `
+Object {
+  "code": 40020000001,
+  "errorMessage": Object {
+    "sortKey": "sortKey must be one of the following values: createdAt,updatedAt",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative get role_list -- As a Sinbad Admin, I should not be able to get role list because sortType is empty string 1`] = `
+Object {
+  "code": 40020000001,
+  "errorMessage": Object {
+    "sortType": "sortType must be one of the following values: asc,desc",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative get role_list -- As a Sinbad Admin, I should not be able to get role list because sortType is invalid 1`] = `
+Object {
+  "code": 40020000001,
+  "errorMessage": Object {
+    "sortType": "sortType must be one of the following values: asc,desc",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;

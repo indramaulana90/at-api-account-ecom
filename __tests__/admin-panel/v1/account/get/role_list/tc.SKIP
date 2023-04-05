@@ -1,0 +1,41 @@
+/**
+* Author      : Farhad (farhad@sinbad.co.id)
+* Modifier    :
+* Domain      : account
+* Description : This File for Provide Testcase on API get_role_list
+*/
+
+export default {
+  describe: 'get role_list --',
+  type: ['@negative', '@positive'],
+  author: 'farhad@sinbad.co.id',
+  cardJira: 'TCH-377',
+  positive: {
+    default: 'As a Sinbad Admin, I should be able to get role list',
+    customPage: 'As a Sinbad Admin, I should be able to get role list with page 2',
+    customPerPage: 'As a Sinbad Admin, I should be able to get role list with perPage 2',
+    customKeyword: 'As a Sinbad Admin, I should be able to get role list with custom keyword',
+    sortKeyCreatedAt: 'As a Sinbad Admin, I should be able to get role list with sortKey createdAt',
+    sortKeyUpdatedAt: 'As a Sinbad Admin, I should be able to get role list with sortKey updatedAt',
+    sortTypeAsc: 'As a Sinbad Admin, I should be able to get role list with sortKey ascending',
+    sortTypeDesc: 'As a Sinbad Admin, I should be able to get role list with sortKey descending',
+    emptyData: 'As a Sinbad Admin, I should be able to get role list with empty data if no conditions have been meet',
+  },
+  negative: {
+    pageInvalid: 'As a Sinbad Admin, I should not be able to get role list because page is invalid',
+    perPageInvalid: 'As a Sinbad Admin, I should not be able to get role list because perPage is invalid',
+    keywordLessThan3: 'As a Sinbad Admin, I should not be able to get role list because keyword less than 3 characters',
+    keywordEmptyString: 'As a Sinbad Admin, I should not be able to get role list because keyword is empty string',
+    sortKeyInvalid: 'As a Sinbad Admin, I should not be able to get role list because sortKey is invalid',
+    sortKeyEmptyString: 'As a Sinbad Admin, I should not be able to get role list because sortKey is empty string',
+    sortTypeInvalid: 'As a Sinbad Admin, I should not be able to get role list because sortType is invalid',
+    sortTypeEmptyString: 'As a Sinbad Admin, I should not be able to get role list because sortType is empty string',
+    someParamsError: 'As a Sinbad Admin, I should not be able to get role list because some params are invalid',
+    allParamsError: 'As a Sinbad Admin, I should not be able to get role list because all params are invalid',
+    xPlatformInvalid: 'As a Sinbad Admin, I should not be able to get role list because set invalid on x-platform header',
+    xPlatformNotSet: 'As a Sinbad Admin, I should not be able to get role list because x-platform header is not set',
+    invalidCookies: 'As a Sinbad Admin, I should not be able to get role list because cookies set to Invalid',
+    nullCookies: 'As a Sinbad Admin, I should not be able to get role list because cookies set to Null',
+    emptyCookies: 'As a Sinbad Admin, I should not be able to get role list because cookies set to Empty',
+  },
+};

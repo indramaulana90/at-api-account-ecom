@@ -1,0 +1,153 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`@negative post create_user -- As a Supplier Admin, I should not be able to create new user because email has been used 1`] = `
+Object {
+  "code": 40020000349,
+  "errorMessage": "An error has occured when doing registration",
+  "message": "You have been registered on this platform",
+  "type": "BAD_REQUEST",
+}
+`;
+
+exports[`@negative post create_user -- As a Supplier Admin, I should not be able to create new user because email is empty string 1`] = `
+Object {
+  "code": 40020000001,
+  "errorMessage": Object {
+    "email": "email should not be empty",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative post create_user -- As a Supplier Admin, I should not be able to create new user because email is invalid 1`] = `
+Object {
+  "code": 40020000001,
+  "errorMessage": Object {
+    "email": "email must be an email",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative post create_user -- As a Supplier Admin, I should not be able to create new user because email is not set 1`] = `
+Object {
+  "code": 40020000001,
+  "errorMessage": Object {
+    "email": "email should not be empty",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative post create_user -- As a Supplier Admin, I should not be able to create new user because email is null 1`] = `
+Object {
+  "code": 40020000001,
+  "errorMessage": Object {
+    "email": "email should not be empty",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative post create_user -- As a Supplier Admin, I should not be able to create new user because name is empty string 1`] = `
+Object {
+  "code": 40020000001,
+  "errorMessage": Object {
+    "name": "name should not be empty",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative post create_user -- As a Supplier Admin, I should not be able to create new user because name is not set 1`] = `
+Object {
+  "code": 40020000001,
+  "errorMessage": Object {
+    "name": "name should not be empty",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative post create_user -- As a Supplier Admin, I should not be able to create new user because name is null 1`] = `
+Object {
+  "code": 40020000001,
+  "errorMessage": Object {
+    "name": "name should not be empty",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative post create_user -- As a Supplier Admin, I should not be able to create new user because name less than 3 chars 1`] = `
+Object {
+  "code": 40020000001,
+  "errorMessage": Object {
+    "name": "name must be longer than or equal to 3 characters",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative post create_user -- As a Supplier Admin, I should not be able to create new user because name more than 50 chars 1`] = `
+Object {
+  "code": 40020000001,
+  "errorMessage": Object {
+    "name": "name must be shorter than or equal to 50 characters",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative post create_user -- As a Supplier Admin, I should not be able to create new user because roleId is empty string 1`] = `
+Object {
+  "code": 40020000001,
+  "errorMessage": Object {
+    "roleId": "roleId should not be empty",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative post create_user -- As a Supplier Admin, I should not be able to create new user because roleId is invalid 1`] = `
+Object {
+  "code": 40020000001,
+  "errorMessage": Object {
+    "roleId": "roleId must be a number conforming to the specified constraints",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative post create_user -- As a Supplier Admin, I should not be able to create new user because roleId is not set 1`] = `
+Object {
+  "code": 40020000001,
+  "errorMessage": Object {
+    "roleId": "roleId should not be empty",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative post create_user -- As a Supplier Admin, I should not be able to create new user because roleId is null 1`] = `
+Object {
+  "code": 40020000001,
+  "errorMessage": Object {
+    "roleId": "roleId should not be empty",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;

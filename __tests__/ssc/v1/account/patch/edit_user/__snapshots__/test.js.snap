@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`@negative patch edit_user -- As a Supplier Admin, I should not be able to edit role of the user because idUser is empty string 1`] = `
+Object {
+  "error": "Not Found",
+  "message": "Cannot PATCH /api/v1/seller-center/user-management/",
+  "statusCode": 404,
+}
+`;
+
+exports[`@negative patch edit_user -- As a Supplier Admin, I should not be able to edit role of the user because idUser is invalid 1`] = `
+Object {
+  "code": 40020000335,
+  "errorMessage": "ID must be a valid number",
+  "message": "Invalid ID",
+  "type": "BAD_REQUEST",
+}
+`;
+
+exports[`@negative patch edit_user -- As a Supplier Admin, I should not be able to edit role of the user because idUser is not found 1`] = `
+Object {
+  "code": 40020000339,
+  "errorMessage": "Data Not Found",
+  "message": "Data not found",
+  "type": "NOT_FOUND",
+}
+`;
+
+exports[`@negative patch edit_user -- As a Supplier Admin, I should not be able to edit role of the user because idUser is null 1`] = `
+Object {
+  "code": 40020000335,
+  "errorMessage": "ID must be a valid number",
+  "message": "Invalid ID",
+  "type": "BAD_REQUEST",
+}
+`;
+
+exports[`@negative patch edit_user -- As a Supplier Admin, I should not be able to edit role of the user because roleId is empty string 1`] = `
+Object {
+  "code": 40020000001,
+  "errorMessage": Object {
+    "roleId": "roleId should not be empty",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative patch edit_user -- As a Supplier Admin, I should not be able to edit role of the user because roleId is invalid 1`] = `
+Object {
+  "code": 40020000001,
+  "errorMessage": Object {
+    "roleId": "roleId must be a number conforming to the specified constraints",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative patch edit_user -- As a Supplier Admin, I should not be able to edit role of the user because roleId is not set 1`] = `
+Object {
+  "code": 40020000001,
+  "errorMessage": Object {
+    "roleId": "roleId should not be empty",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative patch edit_user -- As a Supplier Admin, I should not be able to edit role of the user because roleId is null 1`] = `
+Object {
+  "code": 40020000001,
+  "errorMessage": Object {
+    "roleId": "roleId should not be empty",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;

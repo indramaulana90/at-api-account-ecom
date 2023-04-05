@@ -1,0 +1,37 @@
+/**
+* Author      : Fauzan Novaldi Suteja (fauzan.novaldi@sinbad.co.id)
+* Modifier    :
+* Domain      : account
+* Description : This File for Provide Testcase on API get_district_list
+*/
+
+export default {
+  describe: 'get district_list --',
+  type: ['@negative', '@positive'],
+  author: 'fulki.firosyan@sinbad.co.id', // for no error on auto assigne ATAPI - Xray
+  positive: {
+    requireOnly: 'As a Store, I should be able to get district list with require param only',
+    withKeyword: 'As a Store, I should be able to get district list with keyword',
+    emptyKeyword: 'As a Store, I should be able to get district list with empty keyword',
+    nullKeyword: 'As a Store, I should be able to get district list with null keyword',
+    withSkip: 'As a Store, I should be able to get district list with skip',
+    withLimit: 'As a Store, I should be able to get district list with limit',
+    withSkipLimit: 'As a Store, I should be able to get district list with skip and limit',
+    withAllParams: 'As a Store, I should be able to get district list with all params',
+  },
+  negative: {
+    notFoundKeyword: 'As a Store, I should be able to get district list with not found keyword',
+    invalidCity: 'As a Store, I should not be able to get district list because city is invalid',
+    integerCity: 'As a Store, I should not be able to get district list because city is integer',
+    notSetCity: 'As a Store, I should not be able to get district list because city is not set',
+    nullCity: 'As a Store, I should not be able to get district list because city is null',
+    emptyCity: 'As a Store, I should not be able to get district list because city is empty',
+    xPlatformInvalid: 'As a Store, I should not be able to get district list because set invalid on x-platform header',
+    xPlatformNotSet: 'As a Store, I should not be able to get district list because x-platform header is not set',
+    xPlatformEmpty: 'As a Store, I should not be able to get district list because set empty on x-platform header',
+    xPlatformNull: 'As a Store, I should not be able to get district list because set null on x-platform header',
+    invalidCookies: 'As a Store, I should not be able to get district list because cookies set to Invalid',
+    nullCookies: 'As a Store, I should not be able to get district list because cookies set to Null',
+    emptyCookies: 'As a Store, I should not be able to get district list because cookies set to Empty',
+  },
+};

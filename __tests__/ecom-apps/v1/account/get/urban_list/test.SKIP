@@ -1,0 +1,217 @@
+/**
+* Author      : Fauzan Novaldi Suteja (fauzan.novaldi@sinbad.co.id)
+* Modifier    :
+* Domain      : account
+* Description : This Main File for Testing on API get_urban_list
+*/
+
+import getDataFromPool from '@at-api-core/get-data-from-pool';
+import * as er from '@at-api-core/expect-response';
+import endpoint from './endpoint';
+import * as data from './data';
+import tc from './tc';
+import schema from './schema.json';
+import schemaError from '../../../../../../../helper/schema/schema_error_default.json';
+import rs from '../../../../../../helper/responseStatusLibrary.json';
+import * as selectUrbans from '../../../../../data/model/v1/account/urbans';
+
+const { cookies } = getDataFromPool('sinbad-app', 'Chimera-SR_081231111111');
+
+describe(`${tc.type[1]} ${tc.describe}`, () => {
+  test(`${tc.positive.requireOnly}`, async () => {
+    const payload = data.payloadRequired();
+
+    resp = await endpoint(cookies, payload);
+    er.expectStatus(resp, rs.statusOk);
+    er.expectSchema(resp, schema);
+
+    const objectFiltered = resp.body.data[0];
+    const arrDB = await selectUrbans.selectById(objectFiltered.id);
+    const objectDB = (arrDB)[0];
+    er.expectEqualDB(resp, objectFiltered, objectDB, data.compareDB);
+  });
+
+  test(`${tc.positive.withKeyword}`, async () => {
+    const payload = data.payloadOptional('ARON');
+
+    resp = await endpoint(cookies, payload);
+    er.expectStatus(resp, rs.statusOk);
+    er.expectSchema(resp, schema);
+
+    const dataUrban = resp.body.data;
+    const arrayData = (dataUrban).map((listUrban) => listUrban.urban)[0];
+    er.expectContain(resp, arrayData, payload.keyword);
+
+    const objectFiltered = resp.body.data[0];
+    const arrDB = await selectUrbans.selectById(objectFiltered.id);
+    const objectDB = (arrDB)[0];
+    er.expectEqualDB(resp, objectFiltered, objectDB, data.compareDB);
+  });
+
+  data.loopingKeyword.forEach(async (element) => {
+    test(`${element.title}`, async () => {
+      const payload = data.payloadRequired();
+      payload[Object.keys(element.value)] = Object.values(element.value)[0];
+
+      resp = await endpoint(cookies, payload);
+      er.expectStatus(resp, rs.statusOk);
+      er.expectSchema(resp, schema);
+
+      const objectFiltered = resp.body.data[0];
+      const arrDB = await selectUrbans.selectById(objectFiltered.id);
+      const objectDB = (arrDB)[0];
+      er.expectEqualDB(resp, objectFiltered, objectDB, data.compareDB);
+    });
+  });
+
+  test(`${tc.positive.withLimit}`, async () => {
+    const payload = data.payloadOptional(null, 5, null);
+
+    resp = await endpoint(cookies, payload);
+    er.expectStatus(resp, rs.statusOk);
+    er.expectSchema(resp, schema);
+
+    const dataUrban = resp.body.data;
+    const arrayData = (dataUrban).map((listUrban) => listUrban.id);
+    const dataCount = arrayData.length;
+    er.expectLessThanOrEqual(resp, dataCount, payload.limit);
+    er.expectEqual(resp, resp.body.meta.limit, payload.limit);
+
+    const objectFiltered = resp.body.data[0];
+    const arrDB = await selectUrbans.selectById(objectFiltered.id);
+    const objectDB = (arrDB)[0];
+    er.expectEqualDB(resp, objectFiltered, objectDB, data.compareDB);
+  });
+
+  test.only(`${tc.positive.withSkip}`, async () => {
+    const payload = data.payloadOptional(null, null, 7);
+
+    resp = await endpoint(cookies, payload);
+    console.log(resp.body);
+    er.expectStatus(resp, rs.statusOk);
+    er.expectSchema(resp, schema);
+
+    er.expectEqual(resp, resp.body.meta.skip, payload.skip);
+
+    const objectFiltered = resp.body.data[0];
+    const arrDB = await selectUrbans.selectById(objectFiltered.id);
+    const objectDB = (arrDB)[0];
+    er.expectEqualDB(resp, objectFiltered, objectDB, data.compareDB);
+  });
+
+  test(`${tc.positive.withSkipLimit}`, async () => {
+    const payload = data.payloadOptional(null, 10, 5);
+
+    resp = await endpoint(cookies, payload);
+    er.expectStatus(resp, rs.statusOk);
+    er.expectSchema(resp, schema);
+
+    er.expectEqual(resp, resp.body.meta.skip, payload.skip);
+
+    const dataUrban = resp.body.data;
+    const arrayData = (dataUrban).map((listUrban) => listUrban.id);
+    const dataCount = arrayData.length;
+    er.expectLessThanOrEqual(resp, dataCount, payload.limit);
+
+    const objectFiltered = resp.body.data[0];
+    const arrDB = await selectUrbans.selectById(objectFiltered.id);
+    const objectDB = (arrDB)[0];
+    er.expectEqualDB(resp, objectFiltered, objectDB, data.compareDB);
+  });
+
+  test(`${tc.positive.withAllParams}`, async () => {
+    const payload = data.payloadOptional('ARON', 10, 0);
+
+    resp = await endpoint(cookies, payload);
+    er.expectStatus(resp, rs.statusOk);
+    er.expectSchema(resp, schema);
+
+    er.expectEqual(resp, resp.body.meta.skip, payload.skip);
+
+    const dataUrban = resp.body.data;
+    const arrayData = (dataUrban).map((listUrban) => listUrban.id);
+    const dataCount = arrayData.length;
+    er.expectLessThanOrEqual(resp, dataCount, payload.limit);
+    er.expectEqual(resp, resp.body.meta.limit, payload.limit);
+
+    const arrayDataKey = (dataUrban).map((listUrban) => listUrban.urban)[0];
+    er.expectContain(resp, arrayDataKey, payload.keyword);
+
+    const objectFiltered = resp.body.data[0];
+    const arrDB = await selectUrbans.selectById(objectFiltered.id);
+    const objectDB = (arrDB)[0];
+    er.expectEqualDB(resp, objectFiltered, objectDB, data.compareDB);
+  });
+});
+
+describe(`${tc.type[0]} ${tc.describe}`, () => {
+  test(`${tc.negative.notFoundKeyword}`, async () => {
+    const payload = data.payloadOptional('KRANGGAN');
+
+    resp = await endpoint(cookies, payload);
+    er.expectStatus(resp, rs.statusOk);
+    er.expectSchema(resp, schema);
+    er.expectSnapshot(resp);
+  });
+
+  data.loopingBadRequest.forEach(async (element) => {
+    test(`${element.title}`, async () => {
+      const payload = data.payloadRequired();
+      payload[Object.keys(element.value)] = Object.values(element.value)[0];
+
+      resp = await endpoint(cookies, payload);
+      er.expectStatus(resp, rs.statusBadRequest);
+      er.expectSchema(resp, schemaError);
+      er.expectSnapshot(resp);
+    });
+  });
+
+  data.loopingEmptyArray.forEach(async (element) => {
+    test(`${element.title}`, async () => {
+      const payload = data.payloadRequired();
+      payload[Object.keys(element.value)] = Object.values(element.value)[0];
+
+      resp = await endpoint(cookies, payload);
+      er.expectStatus(resp, rs.statusOk);
+      er.expectSchema(resp, schema);
+      er.expectSnapshot(resp);
+    });
+  });
+});
+
+describe(`${tc.type[0]} ${tc.describe}`, () => {
+  test(`${tc.negative.xPlatformInvalid}`, async () => {
+    const payload = data.payloadRequired();
+
+    resp = await endpoint(cookies, payload).set('x-platform', 'error');
+    er.expectStatus(resp, rs.statusUnauthorized);
+    er.expectUnauthorized(resp);
+  });
+
+  test(`${tc.negative.xPlatformEmpty}`, async () => {
+    const payload = data.payloadRequired();
+
+    resp = await endpoint(cookies, payload).set('x-platform', '');
+    er.expectStatus(resp, rs.statusUnauthorized);
+    er.expectUnauthorized(resp);
+  });
+
+  test(`${tc.negative.xPlatformNull}`, async () => {
+    const payload = data.payloadRequired();
+
+    resp = await endpoint(cookies, payload).set('x-platform', null);
+    er.expectStatus(resp, rs.statusUnauthorized);
+    er.expectUnauthorized(resp);
+  });
+
+  data.loopingErrorCookies.forEach(async (element) => {
+    test(`${element.title}`, async () => {
+      const payload = data.payloadRequired();
+      const cookiesNegative = element.value;
+
+      resp = await endpoint(cookiesNegative, payload);
+      er.expectStatus(resp, rs.statusUnauthorized);
+      er.expectUnauthorized(resp);
+    });
+  });
+});

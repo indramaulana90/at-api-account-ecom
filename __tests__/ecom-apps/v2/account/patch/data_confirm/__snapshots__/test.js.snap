@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`@negative patch data_confirm -- As a Store, I should not be able to confirm my data for upgrade to VIP account when the data is not complete 1`] = `
+Object {
+  "code": 40020000330,
+  "errorMessage": "Make sure your data already complete",
+  "message": "Data Not Complete",
+  "type": "BAD_REQUEST",
+}
+`;

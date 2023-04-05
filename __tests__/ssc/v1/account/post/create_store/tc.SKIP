@@ -1,0 +1,68 @@
+/**
+* Author      : yosua siagian (yosua@sinbad.co.id)
+* Modifier    :
+* Domain      : account
+* Description : This File for Provide Testcase on API post_create_store
+*/
+
+export default {
+  describe: 'post create_store --',
+  type: ['@negative', '@positive'],
+  author: 'fulki.firosyan@sinbad.co.id',
+  cardJira: 'TCH-84',
+  positive: {
+    mandatory: 'As a Supplier Admin, I should be able to create store in SSC with mandatory case',
+
+  },
+  negative: {
+    createStoreRejected: 'As a Supplier System, I should not be able to Create Store because rejected by TRS',
+    createStoreOptionalFieldOnly: 'As a Supplier System, I should not be able to Create Store because optional field only',
+    phone9char: 'As a Supplier System, I should not be able to Create Store because length of phone number is 9',
+    phone15char: 'As a Supplier System, I should not be able to Create Store because length of phone number is 15',
+    phoneInvalidPrefix: 'As a Supplier System, I should not be able to Create Store because prefix is not 08',
+    phoneEmpty: 'As a Supplier System, I should not be able to Create Store because phone number set to empty',
+    phoneNull: 'As a Supplier System, I should not be able to Create Store because phone number set to null',
+    phoneNotSet: 'As a Supplier System, I should not be able to Create Store because phone number is not set',
+    phoneAlreadyExist: 'As a Supplier System, I should not be able to Create Store because phone number already exist',
+    emailInvalidFormat: 'As a Supplier System, I should not be able to Create Store because email set to invalid format',
+    emailEmpty: 'As a Supplier System, I should not be able to Create Store because email set to empty',
+    emailNull: 'As a Supplier System, I should not be able to Create Store because email set to null',
+    emailNotSet: 'As a Supplier System, I should not be able to Create Store because email is not set',
+    emailAlreadyExist: 'As a Supplier System, I should not be able to Create Store because email already exist',
+    userNameEmpty: 'As a Supplier System, I should not be able to Create Name because user name set to empty',
+    userNameNull: 'As a Supplier System, I should not be able to Create Name because user name set to null',
+    userNameNotSet: 'As a Supplier System, I should not be able to Create Name because user name is not set',
+    userNameInteger: 'As a Supplier System, I should not be able to Create Name because user name is integer',
+    nameStoreEmpty: 'As a Supplier System, I should not be able to Create Store because user Store set to empty',
+    nameStoreNull: 'As a Supplier System, I should not be able to Create Store because user Store set to null',
+    nameStoreNotSet: 'As a Supplier System, I should not be able to Create Store because user Store is not set',
+    ktp15Char: 'As a Supplier System, I should not be able to Create Store because KTP is 15 character',
+    ktp17Char: 'As a Supplier System, I should not be able to Create Store because KTP is 17 character',
+    ktpEmpty: 'As a Supplier System, I should not be able to Create Store because ktp set to empty',
+    ktpNull: 'As a Supplier System, I should not be able to Create Store because ktp set to null',
+    ktpNotSet: 'As a Supplier System, I should not be able to Create Store because ktp is not set',
+    ktpString: 'As a Supplier System, I should not be able to Create Store because ktp is string',
+    urbanIdEmpty: 'As a Supplier System, I should not be able to Create Store because urban id set to empty',
+    urbanIdNull: 'As a Supplier System, I should not be able to Create Store because urban id set to null',
+    urbanIdNotSet: 'As a Supplier System, I should not be able to Create Store because urban id is not set',
+    urbanIdInvalid: 'As a Supplier System, I should not be able to Create Store because urban id is invalid format',
+    urbanIdString: 'As a Supplier System, I should not be able to Create Store because urban id is string',
+    addressEmpty: 'As a Supplier System, I should not be able to Create Store because address set to empty',
+    addressNull: 'As a Supplier System, I should not be able to Create Store because address set to null',
+    addressNotSet: 'As a Supplier System, I should not be able to Create Store because address is not set',
+    vehicleIdInvalid: 'As a Supplier System, I should not be able to Create Store because VehicleId is invalid format',
+    vehicleIdString: 'As a Supplier System, I should not be able to Create Store because VehicleId is string',
+    warehouseIdEmpty: 'As a Supplier System, I should not be able to Create Store because warehouseId set to empty',
+    warehouseIdNull: 'As a Supplier System, I should not be able to Create Store because warehouseId set to null',
+    warehouseIdNotSet: 'As a Supplier System, I should not be able to Create Store because warehouseId is not set',
+    warehouseIdInvalid: 'As a Supplier System, I should not be able to Create Store because warehouseId is invalid format',
+    warehouseIdString: 'As a Supplier System, I should not be able to Create Store because warehouseId is string',
+    xPlatformInvalid: 'As a Supplier System, I should not be able to create store because set invalid on x-platform header',
+    xPlatformNotSet: 'As a Supplier System, I should not be able to create store because x-platform header is not set',
+    xPlatformINull: 'As a Supplier System, I should not be able to Create Store because x-platform header set to Null',
+    xPlatformEmpty: 'As a Supplier System, I should not be able to Create Store because x-platform header set to Empty',
+    cookiesInvalid: 'As a Supplier System, I should not be able to Create Store because cookies set to Invalid',
+    cookiesNull: 'As a Supplier System, I should not be able to Create Store because cookies set to Null',
+    cookiesEmpty: 'As a Supplier System, I should not be able to Create Store because cookies set to Empty',
+  },
+};

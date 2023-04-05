@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`@negative get role_detail -- As a Supplier Admin, I should not be able to get role detail because roleId is empty string 1`] = `
+Object {
+  "code": 40020000339,
+  "errorMessage": "Role Not Found",
+  "message": "Role not found",
+  "type": "NOT_FOUND",
+}
+`;
+
+exports[`@negative get role_detail -- As a Supplier Admin, I should not be able to get role detail because roleId is invalid 1`] = `
+Object {
+  "code": 40020000001,
+  "errorMessage": Object {
+    "id": "id must be a number conforming to the specified constraints",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative get role_detail -- As a Supplier Admin, I should not be able to get role detail because roleId is not found 1`] = `
+Object {
+  "code": 40020000339,
+  "errorMessage": "Role Not Found",
+  "message": "Role not found",
+  "type": "NOT_FOUND",
+}
+`;
+
+exports[`@negative get role_detail -- As a Supplier Admin, I should not be able to get role detail because roleId is null 1`] = `
+Object {
+  "code": 40020000339,
+  "errorMessage": "Role Not Found",
+  "message": "Role not found",
+  "type": "NOT_FOUND",
+}
+`;

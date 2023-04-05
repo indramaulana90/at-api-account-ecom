@@ -1,0 +1,36 @@
+/**
+* Author      : Fulki Firosyan (fulki.firosyan@sinbad.co.id)
+* Modifier    :
+* Domain      : account
+* Description : This File for Provide Testcase on API get_provinces_list
+*/
+
+export default {
+  describe: 'get provinces_list --',
+  type: ['@negative', '@positive'],
+  author: 'fulki.firosyan@sinbad.co.id',
+  positive: {
+    limit10Skip0: 'As a Store, I should be able to get province list with limit 10 skip 0',
+    limit5Skip1: 'As a Store, I should be able to get province list with limit 5 skip 1',
+    ascId: 'As a Store, I should be able to get province list with sort asc and sort by id',
+    descName: 'As a Store, I should be able to get province list with sort desc and sort by name',
+    keyword: 'As a Store, I should be able to get province list with keyword "JAWA"',
+    keyword2: 'As a Store, I should be able to get province list with empty keyword',
+  },
+  negative: {
+    limitNull: 'As a Store, I should not be able to get province list because limit set to null',
+    limitEmpty: 'As a Store, I should not be able to get province list because limit set to empty string',
+    limitError: 'As a Store, I should not be able to get province list because limit set to error',
+    limitNotSet: 'As a Store, I should not be able to get province list because limit not set',
+    skipNull: 'As a Store, I should not be able to get province list because skip set to null',
+    skipEmpty: 'As a Store, I should not be able to get province list because skip set to empty string',
+    skipError: 'As a Store, I should not be able to get province list because skip set to error',
+    skipNotSet: 'As a Store, I should not be able to get province list because skip not set',
+    sortError: 'As a Store, I should not be able to get province list because sort set to error',
+    sortByError: 'As a Store, I should not be able to get province list because sort by set to error',
+    keywordNotFound: 'As a Store, I should not be able to get province list because keyword is not found',
+    invalidCookies: 'As a Store, I should not be able to get province list because cookies set to Invalid',
+    nullCookies: 'As a Store, I should not be able to get province list because cookies set to Null',
+    emptyCookies: 'As a Store, I should not be able to get province list because cookies set to Empty',
+  },
+};

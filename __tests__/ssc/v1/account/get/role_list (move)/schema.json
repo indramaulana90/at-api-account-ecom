@@ -1,0 +1,67 @@
+{
+    "type": "object",
+    "properties": {
+      "data": {
+        "type": "array",
+        "items": [
+          {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "name": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "createdAt": {
+                "type": "string"
+              },
+              "updatedAt": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "name",
+              "description",
+              "createdAt",
+              "updatedAt"
+            ]
+          }
+        ]
+      },
+      "meta": {
+        "type": "object",
+        "properties": {
+          "page": {
+            "type": "integer"
+          },
+          "perPage": {
+            "type": "integer"
+          },
+          "total": {
+            "type": "integer"
+          },
+          "totalPage": {
+            "type": "integer"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "page",
+          "perPage",
+          "total",
+          "totalPage"
+        ]
+      }
+    },
+    "additionalProperties": false,
+    "required": [
+      "data",
+      "meta"
+    ]
+  }

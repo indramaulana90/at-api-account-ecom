@@ -1,0 +1,231 @@
+{
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "object",
+      "properties": {
+        "user": {
+          "type": "object",
+          "properties": {
+            "isFullName": {
+              "type": "boolean"
+            },
+            "isIdImageUrl": {
+              "type": "boolean"
+            },
+            "isTaxImageUrl": {
+              "type": "boolean"
+            },
+            "isSelfieImageUrl": {
+              "type": "boolean"
+            },
+            "isValidIdNumber": {
+              "type": "boolean"
+            },
+            "isEmail": {
+              "type": "boolean"
+            },
+            "isImageId": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "isFullName",
+            "isIdImageUrl",
+            "isTaxImageUrl",
+            "isSelfieImageUrl",
+            "isValidIdNumber",
+            "isEmail",
+            "isImageId"
+          ]
+        },
+        "buyer": {
+          "type": "object",
+          "properties": {
+            "isBuyerInformation": {
+              "type": "boolean"
+            },
+            "isImageUrl": {
+              "type": "boolean"
+            },
+            "isAddress": {
+              "type": "boolean"
+            },
+            "isCanContinueToCart": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "isBuyerInformation",
+            "isImageUrl",
+            "isAddress",
+            "isCanContinueToCart"
+          ]
+        },
+        "userData": {
+          "type": "object",
+          "properties": {
+            "fullName": {
+              "type": "string"
+            },
+            "idImageUrl": {
+              "type": "string"
+            },
+            "imageId": {
+              "type": "null"
+            },
+            "taxImageUrl": {
+              "type": "string"
+            },
+            "selfieImageUrl": {
+              "type": "string"
+            },
+            "idNo": {
+              "type": "string"
+            },
+            "idAddress": {
+              "type": "string"
+            },
+            "taxNo": {
+              "type": "string"
+            },
+            "taxName": {
+              "type": "null"
+            },
+            "taxAddress": {
+              "type": "null"
+            },
+            "email": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "fullName",
+            "idImageUrl",
+            "imageId",
+            "taxImageUrl",
+            "selfieImageUrl",
+            "idNo",
+            "idAddress",
+            "taxNo",
+            "taxName",
+            "taxAddress",
+            "email"
+          ]
+        },
+        "buyerData": {
+          "type": "object",
+          "properties": {
+            "buyerCode": {
+              "type": "string"
+            },
+            "buyerName": {
+              "type": "string"
+            },
+            "buyerPhoneNo": {
+              "type": "string"
+            },
+            "imageUrl": {
+              "type": "string"
+            },
+            "address": {
+              "type": "string"
+            },
+            "noteAddress": {
+              "type": "string"
+            },
+            "vehicleAccessibility": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "name": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "name"
+              ]
+            },
+            "vehicleAccessibilityAmount": {
+              "type": "integer"
+            },
+            "latitude": {
+              "type": "number"
+            },
+            "longitude": {
+              "type": "number"
+            },
+            "locationId": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "buyerCode",
+            "buyerName",
+            "buyerPhoneNo",
+            "imageUrl",
+            "address",
+            "noteAddress",
+            "vehicleAccessibility",
+            "vehicleAccessibilityAmount",
+            "latitude",
+            "longitude",
+            "locationId"
+          ]
+        },
+        "accountType": {
+          "type": "string"
+        },
+        "isDataCompleted": {
+          "type": "boolean"
+        },
+        "buyerProgress": {
+          "type": "object",
+          "properties": {
+            "completed": {
+              "type": "integer"
+            },
+            "total": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "completed",
+            "total"
+          ]
+        },
+        "userProgress": {
+          "type": "object",
+          "properties": {
+            "completed": {
+              "type": "integer"
+            },
+            "total": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "completed",
+            "total"
+          ]
+        }
+      },
+      "required": [
+        "user",
+        "buyer",
+        "userData",
+        "buyerData",
+        "accountType",
+        "isDataCompleted",
+        "buyerProgress",
+        "userProgress"
+      ]
+    }
+  },
+  "required": [
+    "data"
+  ]
+}

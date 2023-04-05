@@ -1,0 +1,36 @@
+/**
+* Author      : Fauzan Novaldi Suteja (fauzan.novaldi@sinbad.co.id)
+* Modifier    :
+* Domain      : account
+* Description : This File for Provide Testcase on API get_urban_list
+*/
+
+export default {
+  describe: 'get urban_list --',
+  type: ['@negative', '@positive'],
+  author: 'fulki.firosyan@sinbad.co.id', // for no error on auto assigne ATAPI - Xray
+  positive: {
+    requireOnly: 'As a Store, I should be able to get urban list with require param only',
+    withKeyword: 'As a Store, I should be able to get urban list with keyword',
+    emptyKeyword: 'As a Store, I should be able to get urban list with empty keyword',
+    nullKeyword: 'As a Store, I should be able to get urban list with null keyword',
+    withSkip: 'As a Store, I should be able to get urban list with skip',
+    withLimit: 'As a Store, I should be able to get urban list with limit',
+    withSkipLimit: 'As a Store, I should be able to get urban list with skip and limit',
+    withAllParams: 'As a Store, I should be able to get urban list with all params',
+  },
+  negative: {
+    invalidDistrict: 'As a Store, I should not be able to get urban list because District is invalid',
+    integerDistrict: 'As a Store, I should not be able to get urban list because District is integer',
+    nullDistrict: 'As a Store, I should not be able to get urban list because District is null',
+    emptyDistrict: 'As a Store, I should not be able to get urban list because District is empty',
+    notFoundKeyword: 'As a Store, I should not be able to get urban list with not found keyword',
+    xPlatformInvalid: 'As a Store, I should not be able to get urban list because set invalid on x-platform header',
+    xPlatformNotSet: 'As a Store, I should not be able to get urban list because x-platform header is not set',
+    xPlatformEmpty: 'As a Store, I should not be able to get urban list because set empty on x-platform header',
+    xPlatformNull: 'As a Store, I should not be able to get urban list because set null on x-platform header',
+    invalidCookies: 'As a Store, I should not be able to get urban list because cookies set to Invalid',
+    nullCookies: 'As a Store, I should not be able to get urban list because cookies set to Null',
+    emptyCookies: 'As a Store, I should not be able to get urban list because cookies set to Empty',
+  },
+};

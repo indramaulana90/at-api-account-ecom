@@ -1,0 +1,195 @@
+/**
+* Author      : Fauzan Novaldi Suteja (fauzan.novaldi@sinbad.co.id)
+* Modifier    :
+* Domain      : account
+* Description : This Main File for Testing on API get_employee_internal_list
+*/
+
+import getDataFromPool from '@at-api-core/get-data-from-pool';
+import * as er from '@at-api-core/expect-response';
+import endpoint from './endpoint';
+import * as data from './data';
+import tc from './tc';
+import schema from './schema.json';
+import schemaError from '../../../../../../helper/schema/schema_error_default.json';
+import rs from '../../../../../../helper/responseStatusLibrary.json';
+import * as selectUser from '../../../../../../data/model/v1/account/users';
+
+const { cookies } = getDataFromPool('ng','seller-center', 'TRS_admin.trs@sinbad.co.id');
+
+describe(`${tc.type[1]} ${tc.describe}`, () => {
+  test(`${tc.positive.getInternalEmployeeFullParams}`, async () => {
+    const payload = data.FullPayload('ADMIN', 5, 0, 'ASC', 'name');
+
+    resp = await endpoint(cookies, payload);
+    er.expectStatus(resp, rs.statusOk);
+    er.expectSchema(resp, schema);
+
+    const objectFiltered = resp.body.data[0];
+    const objectFilteredRoles = resp.body.data[0].roles[0];
+    const arrDB = await selectUser.selectById(objectFiltered.id);
+    const objectDB = (arrDB)[0];
+    er.expectEqualDB(resp, objectFiltered, objectDB, data.compareDB);
+    er.expectEqualDB(resp, objectFilteredRoles, objectDB.roles, data.compareDBRoles);
+
+    er.expectEqual(resp, resp.body.meta.skip, payload.skip);
+
+    const dataEmployee = resp.body.data;
+    const arrayData = (dataEmployee).map((listEmployee) => listEmployee.name);
+    const dataCount = arrayData.length;
+    er.expectLessThanOrEqual(resp, dataCount, payload.limit);
+
+    const arrayDataEmployee = resp.body.data;
+    const arrayOfCode = arrayDataEmployee.map((temp) => temp[payload.sortby]);
+    if (payload.sort === 'ASC') {
+      er.expectAscending(resp, arrayOfCode);
+    } else if (payload.sort === 'DESC') {
+      er.expectDescending(resp, arrayOfCode);
+    }
+  });
+
+  test(`${tc.positive.getInternalEmployeeNoParams}`, async () => {
+    resp = await endpoint(cookies);
+    er.expectStatus(resp, rs.statusOk);
+    er.expectSchema(resp, schema);
+
+    const objectFiltered = resp.body.data[0];
+    const objectFilteredRoles = resp.body.data[0].roles[0];
+    const objectFilteredUserSeller = resp.body.data[0].status;
+    const arrDB = await selectUser.selectById(objectFiltered.id);
+    const objectDB = (arrDB)[0];
+    er.expectEqualDB(resp, objectFiltered, objectDB, data.compareDB);
+    er.expectEqualDB(resp, objectFilteredRoles, objectDB.roles, data.compareDBRoles);
+    er.expectEqualDB(resp, objectFilteredUserSeller, objectDB.status, data.compareDBUserSeller);
+  });
+
+  test(`${tc.positive.getInternalEmployeeWithKeyword}`, async () => {
+    const payload = { keyword: 'ADMIN' };
+
+    resp = await endpoint(cookies, payload);
+    er.expectStatus(resp, rs.statusOk);
+    er.expectSchema(resp, schema);
+
+    const dataEmployee = resp.body.data;
+    const arrayData = (dataEmployee).map((listEmployee) => listEmployee.name)[0];
+    er.expectContain(resp, arrayData, payload.keyword);
+  });
+
+  test(`${tc.positive.getInternalEmployeeWithLimit}`, async () => {
+    const payload = { limit: 2 };
+
+    resp = await endpoint(cookies, payload);
+    er.expectStatus(resp, rs.statusOk);
+    er.expectSchema(resp, schema);
+
+    const dataEmployee = resp.body.data;
+    const arrayData = (dataEmployee).map((listEmployee) => listEmployee.name);
+    const dataCount = arrayData.length;
+    er.expectLessThanOrEqual(resp, dataCount, payload.limit);
+  });
+
+  test(`${tc.positive.getInternalEmployeeWithSkip}`, async () => {
+    const payload = { skip: 70 };
+
+    resp = await endpoint(cookies, payload);
+    er.expectStatus(resp, rs.statusOk);
+    er.expectSchema(resp, schema);
+    er.expectEqual(resp, resp.body.meta.skip, payload.skip);
+  });
+
+  test(`${tc.positive.getInternalEmployeeWithSort}`, async () => {
+    const payload = { sort: 'ASC' };
+
+    resp = await endpoint(cookies, payload);
+    er.expectStatus(resp, rs.statusOk);
+    er.expectSchema(resp, schema);
+
+    const objectFiltered = resp.body.data[0];
+    const objectFilteredRoles = resp.body.data[0].roles[0];
+    const arrDB = await selectUser.selectById(objectFiltered.id);
+    const objectDB = (arrDB)[0];
+    er.expectEqualDB(resp, objectFiltered, objectDB, data.compareDB);
+    er.expectEqualDB(resp, objectFilteredRoles, objectDB.roles, data.compareDBRoles);
+
+    const arrayDataEmployee = resp.body.data;
+    const arrayOfCode = arrayDataEmployee.map((temp) => temp.id);
+    if (payload.sort === 'ASC') {
+      er.expectAscending(resp, arrayOfCode);
+    } else if (payload.sort === 'DESC') {
+      er.expectDescending(resp, arrayOfCode);
+    }
+  });
+
+  test(`${tc.positive.getInternalEmployeeWithSortBy}`, async () => {
+    const payload = { sortby: 'name' };
+
+    resp = await endpoint(cookies, payload);
+    er.expectStatus(resp, rs.statusOk);
+    er.expectSchema(resp, schema);
+
+    const objectFiltered = resp.body.data[0];
+    const objectFilteredRoles = resp.body.data[0].roles[0];
+    const arrDB = await selectUser.selectById(objectFiltered.id);
+    const objectDB = (arrDB)[0];
+    er.expectEqualDB(resp, objectFiltered, objectDB, data.compareDB);
+    er.expectEqualDB(resp, objectFilteredRoles, objectDB.roles, data.compareDBRoles);
+
+    const arrayDataEmployee = resp.body.data;
+    const arrayOfCode = arrayDataEmployee.map((temp) => temp.name);
+    er.expectDescending(resp, arrayOfCode);
+  });
+});
+
+describe(`${tc.type[0]} ${tc.describe}`, () => {
+  data.loopingKeyword.forEach(async (element) => {
+    test(`${element.title}`, async () => {
+      const payload = element.value;
+      resp = await endpoint(cookies, payload);
+      er.expectStatus(resp, rs.statusOk);
+      er.expectSchema(resp, schema);
+      er.expectSnapshot(resp);
+    });
+  });
+
+  test(`${tc.negative.getInternalEmployeeStringLimit}`, async () => {
+    const payload = { limit: 'Test' };
+
+    resp = await endpoint(cookies, payload);
+    er.expectStatus(resp, rs.statusBadRequest);
+    er.expectSchema(resp, schemaError);
+    er.expectSnapshot(resp);
+  });
+
+  test(`${tc.negative.getInternalEmployeeStringSkip}`, async () => {
+    const payload = { skip: 'Test' };
+
+    resp = await endpoint(cookies, payload);
+    er.expectStatus(resp, rs.statusBadRequest);
+    er.expectSchema(resp, schemaError);
+    er.expectSnapshot(resp);
+  });
+});
+
+describe(`${tc.type[0]} ${tc.describe}`, () => {
+  test(`${tc.negative.xPlatformInvalid}`, async () => {
+    resp = await endpoint(cookies).set('x-platform', 'error');
+    er.expectStatus(resp, rs.statusUnauthorized);
+    er.expectUnauthorized(resp);
+  });
+
+  test(`${tc.negative.xPlatformNotSet}`, async () => {
+    resp = await endpoint(cookies).unset('x-platform');
+    er.expectStatus(resp, rs.statusUnauthorized);
+    er.expectUnauthorized(resp);
+  });
+
+  data.loopingErrorCookies.forEach(async (element) => {
+    test(`${element.title}`, async () => {
+      const cookiesNegative = element.value;
+
+      resp = await endpoint(cookiesNegative);
+      er.expectStatus(resp, rs.statusUnauthorized);
+      er.expectUnauthorized(resp);
+    });
+  });
+});

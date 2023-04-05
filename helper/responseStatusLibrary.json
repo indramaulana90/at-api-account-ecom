@@ -1,0 +1,18 @@
+{
+  "statusOk": 200,
+  "statusCreated": 201,
+  "statusNoContent": 204,
+  "statusBadRequest": 400,
+  "statusUnauthorized": 401,
+  "statusForbidden": 403,
+  "statusNotFound": 404,
+  "statusMethodNotAllowed": 405,
+  "statusNotAcceptable": 406,
+  "statusToLarge": 413,
+  "statusUnprocessableEntity": 422,
+  "statusInternalServerError": 500,
+  "failedMultipleChoices": {
+    "codeNumber": 300,
+    "codeMessage": "MultipleChoices"
+  }
+}

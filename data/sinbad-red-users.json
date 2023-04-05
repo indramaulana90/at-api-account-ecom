@@ -1,0 +1,14 @@
+[
+    { "name": "red1", "mobilePhone": "082297872220"},
+    { "name": "Scimitar-SR", "mobilePhone": "081239999999", "email": "ScimitarSR@ATAPIqe.com" },
+    { "name": "Kanzun-SR", "mobilePhone": "081238888888", "email": "KanzunSR@ATAPIqe.com" },
+    { "name": "Voyager-SR", "mobilePhone": "081237777777", "email": "VoyagerSR@ATAPIqe.com" },
+    { "name": "Dinar-SR", "mobilePhone": "081236666666", "email": "DinarSR@ATAPIqe.com" },
+    { "name": "Valkyrie-SR", "mobilePhone": "08786666666", "email": "ValkyrieSR@ATAPIqe.com" },
+    { "name": "Valkyrie-Stg", "mobilePhone": "08783333333", "email": "ValkyrieStg@ATAPIqe.com" },
+    { "name": "Pyramid-SR", "mobilePhone": "081234444444", "email": "PyramidSR@ATAPIqe.com" },
+    { "name": "DavyJones-SR", "mobilePhone": "081232222222", "email": "DavyJonesSR@ATAPIqe.com" },
+    { "name": "Chimera-SR", "mobilePhone": "081231111111", "email": "ChimeraSR@ATAPIqe.com" },
+    { "name": "No Name", "mobilePhone": "085717216917", "email": "chimera@mail.com" }
+  ]
+  

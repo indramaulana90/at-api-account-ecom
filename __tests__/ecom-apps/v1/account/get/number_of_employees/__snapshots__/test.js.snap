@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`@negative get number_of_employees -- As a Store, I should not be able to get all list of number of employee because cookies set to Empty 1`] = `Object {}`;
+
+exports[`@negative get number_of_employees -- As a Store, I should not be able to get all list of number of employee because cookies set to Invalid 1`] = `Object {}`;
+
+exports[`@negative get number_of_employees -- As a Store, I should not be able to get all list of number of employee because cookies set to Null 1`] = `Object {}`;
+
+exports[`@negative get number_of_employees -- As a Store, I should not be able to get all list of number of employee because set invalid on x-platform header 1`] = `Object {}`;
+
+exports[`@negative get number_of_employees -- As a Store, I should not be able to get all list of number of employee because x-platform header is not set 1`] = `Object {}`;
+
+exports[`@negative get number_of_employees -- As a Store, I should not be able to get all list of number of employee with x-platform empty 1`] = `Object {}`;
+
+exports[`@negative get number_of_employees -- As a Store, I should not be able to get all list of number of employee with x-platform null 1`] = `Object {}`;
+
+exports[`@positive get number_of_employees -- As a Store, I should be able to get all list of number of employee 1`] = `
+Object {
+  "data": Array [
+    Object {
+      "amount": "1 - 10",
+    },
+    Object {
+      "amount": "11 - 20",
+    },
+    Object {
+      "amount": "20 - 50",
+    },
+    Object {
+      "amount": "50 - 100",
+    },
+    Object {
+      "amount": "> 100",
+    },
+  ],
+}
+`;

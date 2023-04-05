@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`@negative patch verify_imageid -- As a Store, I should not be able to update imageId if the type is not a string 1`] = `
+Object {
+  "code": 40010000001,
+  "errorMessage": Object {
+    "imageId": "imageId must be a string",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;

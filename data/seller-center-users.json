@@ -1,0 +1,6 @@
+[
+  { "name": "TRS", "username": "admin.trs@sinbad.co.id", "password": "sinbad" },
+  { "name": "Unipro", "username": "admin.unipro@sinbad.co.id", "password": "sinbad" },
+  { "name": "Quality", "username": "quality.sinbad@gmail.com", "password": "quality3607" },
+  { "name": "Preprod", "username": "admin.techquality@sinbad.co.id", "password": "sinbad" }
+]

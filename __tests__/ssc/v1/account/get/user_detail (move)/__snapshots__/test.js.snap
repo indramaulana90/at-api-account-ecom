@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`@negative get user_detail -- As a Supplier Admin, I should not be able to get user detail because idUser is invalid 1`] = `
+Object {
+  "code": 40020000335,
+  "errorMessage": "ID must be a valid number",
+  "message": "Invalid ID",
+  "type": "BAD_REQUEST",
+}
+`;
+
+exports[`@negative get user_detail -- As a Supplier Admin, I should not be able to get user detail because idUser is null 1`] = `
+Object {
+  "code": 40020000335,
+  "errorMessage": "ID must be a valid number",
+  "message": "Invalid ID",
+  "type": "BAD_REQUEST",
+}
+`;

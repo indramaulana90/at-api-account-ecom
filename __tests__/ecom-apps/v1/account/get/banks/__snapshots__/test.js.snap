@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`@negative get banks -- As a Store, I should not be able to get all list because cookies set to Empty 1`] = `Object {}`;
+
+exports[`@negative get banks -- As a Store, I should not be able to get all list because cookies set to Invalid 1`] = `Object {}`;
+
+exports[`@negative get banks -- As a Store, I should not be able to get all list because cookies set to Null 1`] = `Object {}`;
+
+exports[`@negative get banks -- As a Store, I should not be able to get all list because x-platform header is not set 1`] = `Object {}`;
+
+exports[`@negative get banks -- As a Store, I should not be able to get all list because x-platform invalid 1`] = `Object {}`;
+
+exports[`@negative get banks -- As a Store, I should not be able to get all list of bank with parameter integer 1`] = `
+Object {
+  "data": Array [],
+}
+`;
+
+exports[`@negative get banks -- As a Store, I should not be able to get all list of bank with parameter invalid data 1`] = `
+Object {
+  "data": Array [],
+}
+`;
+
+exports[`@negative get banks -- As a Store, I should not be able to get all list of bank with x-platform empty 1`] = `Object {}`;
+
+exports[`@negative get banks -- As a Store, I should not be able to get all list of bank with x-platform null 1`] = `Object {}`;
+
+exports[`@positive get banks -- As a Store, I should be able to get all list of bank with parameter empty 1`] = `
+Object {
+  "data": Array [
+    Object {
+      "id": 1,
+      "name": "Bank BCA",
+    },
+    Object {
+      "id": 2,
+      "name": "Bank BNI",
+    },
+    Object {
+      "id": 4,
+      "name": "Bank BRI",
+    },
+    Object {
+      "id": 3,
+      "name": "Bank Mandiri",
+    },
+  ],
+}
+`;
+
+exports[`@positive get banks -- As a Store, I should be able to get all list of bank with parameter null 1`] = `
+Object {
+  "data": Array [
+    Object {
+      "id": 1,
+      "name": "Bank BCA",
+    },
+    Object {
+      "id": 2,
+      "name": "Bank BNI",
+    },
+    Object {
+      "id": 4,
+      "name": "Bank BRI",
+    },
+    Object {
+      "id": 3,
+      "name": "Bank Mandiri",
+    },
+  ],
+}
+`;

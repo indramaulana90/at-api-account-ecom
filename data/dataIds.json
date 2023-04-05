@@ -1,0 +1,182 @@
+[
+	{
+		"relativePath": "__tests__/v1/example/post/example/data.js",
+		"ids": {
+			"idUsers": 999999999
+		}
+	},
+	{
+		"relativePath": "__tests__/v1/order/get/order_parcel_detail/data.js",
+		"ids": {
+			"idOrders": 839640065,
+			"idOrderParcels": 839641572,
+			"idOrderParcelProducts": 839644779,
+			"idBrands": "888888f39970108f39970108",
+			"idBuyers": 839966387,
+			"idUrbans": 839966387,
+			"idInvoiceGroups": "888888f39970108f39970108",
+			"idCart": "888888f39970314f39970314",
+			"idDevice": "839966387",
+			"idProducts": "888888f39970108f39970108",
+			"idPhoneNumber": 839981005
+		}
+	},
+	{
+		"relativePath": "__tests__/v1/salesman_kpi/get/workday_list/data.js",
+		"ids": {
+			"idWorkingDays": [
+				841736409,
+				841736511,
+				841736535
+			]
+		}
+	},
+	{
+		"relativePath": "__tests__/v1/salesman_kpi/get/workday_detail/data.js",
+		"ids": {
+			"idWorkingDays": [
+				841802581,
+				841802625
+			]
+		}
+	},
+	{
+		"relativePath": "__tests__/v1/salesman_kpi/delete/workingDay/data.js",
+		"ids": {
+			"idWorkingDays": [
+				841888623,
+				841888635,
+				841888672
+			]
+		}
+	},
+	{
+		"relativePath": "__tests__/v1/salesman_kpi/patch/update_workingday/data.js",
+		"ids": {
+			"idWorkingDays": [
+				841909018,
+				841909045,
+				841909072
+			]
+		}
+	},
+	{
+		"relativePath": "__tests__/v1/order/post/cancel_order_parcel/data.js",
+		"ids": {
+			"idOrders": 842063620,
+			"idOrderParcels": 842063620,
+			"idOrderParcelProducts": 842063620,
+			"idBrands": "888888f42063620f42063620",
+			"idBuyers": 842063620,
+			"idUrbans": 842063620,
+			"idInvoiceGroups": "888888f42063620f42063620",
+			"idCart": "888888f42063620f42063620",
+			"idDevice": 842063620,
+			"idProducts": "888888f42063620f42063620",
+			"idPhoneNumber": 842063620
+		}
+	},
+	{
+		"relativePath": "__tests__/v1/salesman_kpi/get/holiday_list/data.js",
+		"ids": {
+			"idHolidays": [
+				841986121,
+				841986145,
+				841986166,
+				841986181,
+				841986198
+			]
+		}
+	},
+	{
+		"relativePath": "__tests__/v1/salesman_kpi/get/holiday_detail/data.js",
+		"ids": {
+			"idHolidays": [
+				841994725,
+				841994752
+			]
+		}
+	},
+	{
+		"relativePath": "__tests__/v1/salesman_kpi/delete/holidays/data.js",
+		"ids": {
+			"idHolidays": [
+				841999606,
+				841999633,
+				841999652
+			]
+		}
+	},
+	{
+		"relativePath": "__tests__/v1/salesman_kpi/post/holiday/data.js",
+		"ids": {
+			"idHolidays": 842147917
+		}
+	},
+	{
+		"relativePath": "__tests__/v1/salesman_kpi/patch/holiday_update/data.js",
+		"ids": {
+			"idHolidays": [
+				842318652,
+				842318674,
+				842318692,
+				842321145
+			]
+		}
+	},
+	{
+		"relativePath": "__tests__/v1/order/patch/update_order_status/data.js",
+		"ids": {
+			"idOrders": 842412325,
+			"idOrderParcels": 842412325,
+			"idOrderParcelProducts": 842412325,
+			"idBrands": "888888f42412325f42412325",
+			"idBuyers": 842412325,
+			"idUrbans": 842412325,
+			"idInvoiceGroups": "888888f42412325f42412325",
+			"idCart": "888888f42412325f42412325",
+			"idDevice": 842412325,
+			"idProducts": "888888f42412325f42412325",
+			"idPhoneNumber": 842412325
+		}
+	},
+	{
+		"relativePath": "__tests__/v1/buyer_order/patch/order_sellers_is_read/data.js",
+		"ids": {
+			"idOrders": 856578262,
+			"idOrderSellers": 856578315
+		}
+	},
+	{
+		"relativePath": "__tests__/v1/buyer_order/patch/update_order_seller_failed/data.js",
+		"ids": {
+			"idOrders": 856642262,
+			"idOrderSellers": 856642262,
+			"idCart": "888888f56642550f56642550",
+			"idDevice": 856642550,
+			"idOrderBilling": 856642736,
+			"idOrderSellerStatusHistoriesId": 856642736,
+			"idOrderProduct": 856642736
+		}
+	},
+	{
+		"relativePath": "__tests__/v1/buyer_order/patch/update_order_seller_cancel/data.js",
+		"ids": {
+			"idOrders": 856664266,
+			"idOrderSellers": 856664266
+		}
+	},
+	{
+		"relativePath": "__tests__/v1/warehouse/post/assign_product/data.js",
+		"ids": {
+			"idWarehouses": 862452416,
+			"idSyncProduct": "62ec8be49c912a4015db7b41"
+		}
+	},
+	{
+		"relativePath": "__tests__/v1/warehouse/patch/warehouse_assign_product/data.js",
+		"ids": {
+			"idSyncProduct": "62ec8be49c912a4015db7b41"
+		}
+	}
+]

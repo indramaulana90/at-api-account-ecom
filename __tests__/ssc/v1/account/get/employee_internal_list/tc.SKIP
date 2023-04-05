@@ -1,0 +1,33 @@
+/**
+* Author      : Fauzan Novaldi Suteja (fulki.firosyan@sinbad.co.id)
+* Modifier    :
+* Domain      : account
+* Description : This File for Provide Testcase on API get_employee_internal_list
+*/
+
+export default {
+  describe: 'get employee_internal_list --',
+  type: ['@negative', '@positive'],
+  author: 'fulki.firosyan@sinbad.co.id',
+  cardJira: 'TCH-84',
+  positive: {
+    getInternalEmployeeFullParams: 'As a Supplier Admin, I should be able to get list of employee internal with full params',
+    getInternalEmployeeNoParams: 'As a Supplier Admin, I should be able to get list of employee internal with no params',
+    getInternalEmployeeWithKeyword: 'As a Supplier Admin, I should be able to get list of employee internal with keyword',
+    getInternalEmployeeWithSkip: 'As a Supplier Admin, I should be able to get list of employee internal with skip',
+    getInternalEmployeeWithLimit: 'As a Supplier Admin, I should be able to get list of employee internal with limit',
+    getInternalEmployeeWithSort: 'As a Supplier Admin, I should be able to get list of employee internal with sort',
+    getInternalEmployeeWithSortBy: 'As a Supplier Admin, I should be able to get list of employee internal with sortby',
+  },
+  negative: {
+    getInternalEmployeeInvalidKeyword: 'As a Supplier Admin, I should not be able to get list of employee internal because set invalid type on keyword',
+    getInternalEmployeeWrongKeyword: 'As a Supplier Admin, I should not be able to get list of employee internal because keyword is wrong',
+    getInternalEmployeeStringLimit: 'As a Supplier Admin, I should not be able to get list of employee internal because set string on limit',
+    getInternalEmployeeStringSkip: 'As a Supplier Admin, I should not be able to get list of employee internal because set string on skip',
+    xPlatformInvalid: 'As a Supplier Admin, I should not be able to get list of employee internal because set invalid on x-platform header',
+    xPlatformNotSet: 'As a Supplier Admin, I should not be able to get list of employee internal because x-platform header is not set',
+    invalidCookies: 'As a Supplier Admin, I should not be able to get list of employee internal because cookies set to Invalid',
+    nullCookies: 'As a Supplier Admin, I should not be able to get list of employee internal because cookies set to Null',
+    emptyCookies: 'As a Supplier Admin, I should not be able to get list of employee internal because cookies set to Empty',
+  },
+};

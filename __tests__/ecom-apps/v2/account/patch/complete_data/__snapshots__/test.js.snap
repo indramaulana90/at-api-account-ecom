@@ -1,0 +1,116 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`@negative patch complete_data -- As a Store, I should not be able to update registration data with buyerCategoryId set to Empty String 1`] = `
+Object {
+  "code": 40010000001,
+  "errorMessage": Object {
+    "buyerCategoryId": "buyerCategoryId must be a number conforming to the specified constraints",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative patch complete_data -- As a Store, I should not be able to update registration data with buyerCategoryId set to Invalid 1`] = `
+Object {
+  "code": 40020000326,
+  "errorMessage": "Buyer Categories not exist in our system",
+  "message": "Not exists buyer categories",
+  "type": "BAD_REQUEST",
+}
+`;
+
+exports[`@negative patch complete_data -- As a Store, I should not be able to update registration data with buyerCategoryId set to Null 1`] = `
+Object {
+  "code": 40010000001,
+  "errorMessage": Object {
+    "buyerCategoryId": "buyerCategoryId must be a number conforming to the specified constraints",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative patch complete_data -- As a Store, I should not be able to update registration data with locationId set to Empty String 1`] = `
+Object {
+  "code": 40010000001,
+  "errorMessage": Object {
+    "locationId": "locationId should not be empty",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative patch complete_data -- As a Store, I should not be able to update registration data with locationId set to Integer 1`] = `
+Object {
+  "code": 40010000001,
+  "errorMessage": Object {
+    "locationId": "locationId must be a string",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative patch complete_data -- As a Store, I should not be able to update registration data with locationId set to Null 1`] = `
+Object {
+  "code": 40010000001,
+  "errorMessage": Object {
+    "locationId": "locationId must be a string",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative patch complete_data -- As a Store, I should not be able to update registration data with productCategoryIds set to Empty String 1`] = `
+Object {
+  "code": 40010000001,
+  "errorMessage": Object {
+    "productCategoryIds": "productCategoryIds must be an array",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative patch complete_data -- As a Store, I should not be able to update registration data with productCategoryIds set to Empty String inside array 1`] = `
+Object {
+  "code": 40020000329,
+  "errorMessage": "Product category id cannot be empty string",
+  "message": "Invalid Product Category ID",
+  "type": "BAD_REQUEST",
+}
+`;
+
+exports[`@negative patch complete_data -- As a Store, I should not be able to update registration data with productCategoryIds set to Integer 1`] = `
+Object {
+  "code": 40010000001,
+  "errorMessage": Object {
+    "productCategoryIds": "productCategoryIds must be an array",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative patch complete_data -- As a Store, I should not be able to update registration data with productCategoryIds set to Null 1`] = `
+Object {
+  "code": 40010000001,
+  "errorMessage": Object {
+    "productCategoryIds": "productCategoryIds must be an array",
+  },
+  "message": "Unprocessable Entity",
+  "type": "UNPROCESSABLE_ENTITY",
+}
+`;
+
+exports[`@negative patch complete_data -- As a Store, I should not be able to update registration data with productCategoryIds set to invalidId inside array 1`] = `
+Object {
+  "code": 40020000327,
+  "errorMessage": "Product category id must be an ObjectID",
+  "message": "Invalid ObjectID",
+  "type": "BAD_REQUEST",
+}
+`;
